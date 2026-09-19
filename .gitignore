@@ -1,0 +1,16 @@
+# Temporary scratch directory and test scripts / browser profiles
+scratch/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log

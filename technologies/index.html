@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var l;try{l=localStorage.getItem('dt-lang')}catch(e){}
+if(l!=='id'&&l!=='en'){var a=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];l='en';
+for(var i=0;i<a.length;i++){if(/^id\b/i.test(a[i]||'')){l='id';break}}}
+document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);
+if(l==='en'){document.documentElement.className+=' dt-pending';
+setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1500)}})();</script>
+<style>html.dt-pending body{visibility:hidden}</style>
+
+<title>DIBSEN TECH — Teknologi: Biometrik, Audit Akses &amp; Infrastruktur</title>
+<meta name="description" content="Bagaimana SIPneX, SosMedPlus, dan Safe Raja Ampat bekerja di dalam: pengenalan wajah anti-spoofing, integrasi AI lewat API, Hedera Hashgraph, dan sinkronisasi offline-first.">
+<meta name="theme-color" content="#0E0614">
+<link rel="canonical" href="https://dibsen.io/technologies">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DIBSEN TECH">
+<meta property="og:url" content="https://dibsen.io/technologies">
+<meta property="og:title" content="DIBSEN TECH — Teknologi: Biometrik, Audit Akses &amp; Infrastruktur">
+<meta property="og:description" content="Bagaimana SIPneX, SosMedPlus, dan Safe Raja Ampat bekerja di dalam: pengenalan wajah anti-spoofing, integrasi AI lewat API, Hedera Hashgraph, dan sinkronisasi offline-first.">
+<meta property="og:image" content="https://dibsen.io/assets/dibsen-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=spectrum26">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "DIBSEN TECH", "alternateName": ["DIBSEN", "Dibsen Tech", "Digital Innovation Base and Software Engineering Network"], "url": "https://dibsen.io/", "publisher": {"@id": "https://dibsen.io/#organization"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://dibsen.io/#organization", "name": "DIBSEN TECH", "legalName": "Digital Innovation Base and Software Engineering Network", "alternateName": "DIBSEN", "url": "https://dibsen.io/", "logo": {"@type": "ImageObject", "url": "https://dibsen.io/assets/logo-dibsen.png", "width": 512, "height": 512}, "image": "https://dibsen.io/assets/dibsen-cover.jpg", "description": "Studio rekayasa perangkat lunak lintas platform dari Raja Ampat. Membangun ekosistem aplikasi web dan mobile yang aman dan terukur untuk instansi pemerintah, usaha, dan perorangan.", "foundingDate": "2025", "address": {"@type": "PostalAddress", "addressLocality": "Waisai, Raja Ampat", "addressRegion": "Papua Barat Daya", "addressCountry": "ID"}, "contactPoint": [{"@type": "ContactPoint", "telephone": "+62-821-1251-5277", "email": "info@support.dibsen.io", "contactType": "sales", "areaServed": "ID", "availableLanguage": ["id", "en"]}], "sameAs": ["https://play.google.com/store/apps/details?id=xyz.sipnex.app", "https://play.google.com/store/apps/details?id=com.dibsen.warganet_life", "https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat"]}</script>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="wordmark" href="/" aria-label="DIBSEN TECH, ke beranda">
+      <span class="wordmark__tile" aria-hidden="true"><img src="/assets/dibsen-icon.png" alt=""></span>
+      <span class="wordmark__text">DIBSEN TECH</span>
+    </a>
+    <input class="nav__cb" type="checkbox" id="navToggle">
+    <nav class="nav__links" aria-label="Navigasi utama">
+      <a href="/">Beranda</a>
+      <a href="/products">Produk</a>
+      <a href="/services">Layanan</a>
+      <a href="/technologies" aria-current="page">Teknologi</a>
+      <a href="/about-us">Tentang</a>
+      <a href="/contact">Kontak</a>
+    </nav>
+    <div class="nav__right">
+      <div class="langsw" role="group" aria-label="Language / Bahasa" translate="no" data-no-i18n><button type="button" data-set-lang="id" aria-label="Bahasa Indonesia">ID</button><button type="button" data-set-lang="en" aria-label="English">EN</button></div>
+      <label class="burger" for="navToggle" aria-label="Buka menu">
+        <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </label>
+      <a class="btn btn--amber btn--sm" href="/contact">Hubungi Kami</a>
+    </div>
+  </div>
+</header>
+<section class="pagehead pagehead--filmroll">
+  <div class="mesh" aria-hidden="true">
+    <span class="blob blob--amber"></span><span class="blob blob--rust"></span>
+    <span class="blob blob--cobalt"></span><span class="blob blob--warm"></span>
+  </div>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="container pagehead__filmgrid">
+    <div class="pagehead__filmintro">
+      <div class="crumb" data-reveal><a href="/">Beranda</a> / Teknologi</div>
+      <h1 data-reveal style="--d:1">Lapisan yang jarang terlihat, tapi menentukan segalanya.</h1>
+      <p class="lead" data-reveal style="--d:2">Bagian ini menjelaskan bagaimana ketiga produk kami bekerja di dalam — dari algoritma pengenalan wajah dan jejak audit, integrasi AI dan blockchain, sampai sinkronisasi data di lokasi tanpa sinyal.</p>
+    </div>
+
+    <div class="pagehead__filmpresenter" data-reveal style="--d:2">
+      <!-- 35mm Vintage Film Strip Card (Konsep B) -->
+      <div class="filmroll-card filmroll-card--tech">
+        <!-- Top Sprocket Rail -->
+        <div class="filmroll-rail filmroll-rail--top" aria-hidden="true">
+          <div class="filmroll-sprockets"></div>
+          <div class="filmroll-edge-text">
+            <span>▶ FUJI ETERNA</span>
+            <span>DIBSEN CORE 35MM</span>
+            <span>08A</span>
+          </div>
+        </div>
+
+        <!-- Video Aperture Window -->
+        <div class="filmroll-aperture">
+          <video class="filmroll-video" autoplay muted loop playsinline preload="metadata" poster="/assets/sec/tech-hero-poster.jpg?v=5" aria-hidden="true">
+            <source src="/assets/sec/tech-hero.mp4?v=5" type="video/mp4">
+          </video>
+          <div class="filmroll-vignette" aria-hidden="true"></div>
+          <div class="filmroll-glare" aria-hidden="true"></div>
+          <div class="filmroll-badge" aria-hidden="true">
+            <span class="filmroll-badge__dot"></span>
+            <span class="filmroll-badge__label">ARCH • DEEP TECH</span>
+          </div>
+        </div>
+
+        <!-- Bottom Sprocket Rail -->
+        <div class="filmroll-rail filmroll-rail--bottom" aria-hidden="true">
+          <div class="filmroll-edge-text">
+            <span>SAFETY FILM</span>
+            <span>ISO 400 • PBD 2026</span>
+            <span>FRAME 08</span>
+          </div>
+          <div class="filmroll-sprockets"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="techmap-section" aria-labelledby="techmap-title">
+  <div class="container">
+    <div class="techmap-head" data-reveal>
+      <span class="marker">DIBSEN SYSTEM MAP</span>
+      <h2 id="techmap-title">Tiga ekosistem. Satu standar kepercayaan.</h2>
+    </div>
+    <div class="techmap" data-reveal style="--d:1">
+      <canvas id="tech-constellation" aria-hidden="true"></canvas>
+      <!-- Label menempel langsung di klasternya (diposisikan tiap frame oleh
+           tech-constellation.js dari koordinat 3D), menggantikan legend
+           swatch warna yang lama. Alasannya bukan cuma estetika: legend
+           warna menuntut pembaca mencocokkan warna ke daftar, sedangkan
+           label di tempat langsung menamai klasternya. Teksnya sengaja
+           dipertahankan sama persis dengan legend lama supaya kamus i18n
+           yang sudah ada tetap cocok tanpa diubah. -->
+      <div class="techmap__labels">
+        <a class="techmap__label" data-node="sipnex" href="#sipnex"><i class="is-teal" aria-hidden="true"></i>SIPneX · Verifikasi</a>
+        <a class="techmap__label" data-node="sosialmedia" href="#sosialmedia"><i class="is-gold" aria-hidden="true"></i>SosMedPlus · Kecerdasan</a>
+        <a class="techmap__label" data-node="safe" href="#safe"><i class="is-orange" aria-hidden="true"></i>Safe Raja Ampat · Respons</a>
+        <span class="techmap__label techmap__label--core" data-node="core">DIBSEN.TECH</span>
+      </div>
+      <p class="techmap__note">Ilustrasi sistem · bukan representasi data langsung</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIPNEX ============ -->
+<section class="section" id="sipnex">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="marker">SIPneX · Integritas data kepegawaian</span>
+      <h2>Keamanan yang bekerja sampai ke lapisan yang jarang terlihat.</h2>
+    </div>
+
+    
+      <div class="feature" data-reveal style="--d:1">
+        <div class="feature__side">
+          <h3>Keamanan Biometrik Berlapis</h3>
+          <p>Algoritma pengenalan wajah yang cerdas dan aman, dirancang untuk dipercaya sebagai bukti kehadiran.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Pendaftaran wajah unik</b><span>Sistem merekam face embedding — pola wajah unik tiap pegawai. Sekali terdaftar, data ini menjadi kunci akses utama yang tidak bisa dipalsukan.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Verifikasi real-time</b><span>Saat presensi, sistem mencocokkan wajah secara instan dengan data tersimpan. Jika tidak cocok, akses otomatis ditolak.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Anti-spoofing</b><span>Panduan oval kamera memastikan yang dipindai adalah wajah manusia asli di lokasi, bukan foto atau video yang diarahkan ke kamera.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Data wajah tersimpan sebagai kode</b><span>Wajah diproses menjadi kode terenkripsi, sehingga yang tersimpan bukan foto yang bisa dilihat kembali.</span></div></li></ul>
+      </div>
+
+    
+      <div class="feature" data-reveal style="--d:2">
+        <div class="feature__side">
+          <h3>Audit Keamanan Akses</h3>
+          <p>SIPneX menjaga akun pegawai dari akses ilegal dan memberi mereka alat untuk memeriksanya sendiri.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Monitoring perangkat</b><span>Setiap aktivitas login tercatat lengkap dengan jenis perangkat — smartphone maupun peramban web.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Jejak digital akurat</b><span>Waktu akses ditampilkan presisi hingga menit dan detik, sehingga aktivitas mencurigakan langsung terlihat.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Satu akun satu perangkat</b><span>Sistem memantau di mana saja akun digunakan untuk menjaga integritas data.</span></div></li></ul>
+      </div>
+
+    
+      <div class="feature" data-reveal style="--d:1">
+        <div class="feature__side">
+          <h3>Transparansi Riwayat &amp; Kinerja</h3>
+          <p>Pegawai punya akses penuh untuk memantau kedisiplinan dan capaian mereka sendiri.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Log kehadiran lengkap</b><span>Detail jam masuk, jam pulang, dan status kehadiran tersedia harian maupun bulanan.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Filter bulanan otomatis</b><span>Memudahkan pemeriksaan riwayat bulan sebelumnya untuk keperluan administrasi atau sanggahan.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Kalkulasi nilai yang adil</b><span>Nilai kinerja harian tampil langsung. Jika pegawai lupa absen pulang, sistem memberi peringatan dan menyesuaikan nilai secara proporsional.</span></div></li></ul>
+      </div>
+
+    
+      <div class="feature" data-reveal style="--d:2">
+        <div class="feature__side">
+          <h3>Monitoring &amp; Performa</h3>
+          <p>Untuk instansi yang harus mengelola ribuan baris data dengan cepat, di perangkat kelas menengah.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Rekap dan filter cerdas</b><span>Seluruh jurnal bawahan tampil dalam satu layar, bisa dicari berdasarkan NIP maupun nama, lalu diekspor menjadi PDF resmi.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Session persistence</b><span>Pegawai tidak perlu login berulang setiap membuka aplikasi selama sesi masih aktif.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Sinkronisasi real-time</b><span>Setiap data yang diinput langsung tersimpan aman di cloud melalui database modern.</span></div></li></ul>
+      </div>
+  </div>
+</section>
+
+<!-- ============ SOSMEDPLUS ============ -->
+<section class="section section--panel" id="sosialmedia">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="marker">SosMedPlus · AI dan blockchain</span>
+      <h2>Dua lapisan yang dibangun sendiri: kecerdasan dan kepemilikan.</h2>
+      <p class="lead">Bagian ini yang paling sering disalahpahami sebagai fitur pinjaman. Padahal AI Studio dan seluruh lapisan Hedera dibangun langsung di dalam aplikasi, dan berdiri terpisah dari kanal portal.</p>
+    </div>
+
+    
+      <div class="feature" data-reveal style="--d:1">
+        <div class="feature__side">
+          <h3>Integrasi AI melalui API</h3>
+          <p>Model dipanggil langsung melalui API resmi masing-masing penyedia, lalu hasilnya diolah dan disimpan di dalam ekosistem aplikasi.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Beberapa model dalam satu antarmuka</b><span>Gemini, ChatGPT, Claude, dan DeepSeek dapat dipilih dari daftar yang sama, sehingga pengguna berpindah model tanpa berpindah aplikasi.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Jalur gratis dan jalur berkuota</b><span>Setiap pengguna memperoleh jatah harian, dengan kuota tambahan untuk pemakaian berat. Sisa pemakaian terlihat di Dompet Kuota.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Dua studio generatif</b><span>Studio Gambar AI menyediakan mode Standar dan Pro Ultra HD. Studio Musik AI menyediakan Mode Kilat untuk instrumen dan Mode Vokal untuk lagu bervokal utuh.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Hasil menjadi milik pengguna</b><span>Setiap karya masuk ke Koleksi Saya — siap diputar, diunduh, dibagikan, atau dicetak menjadi NFT.</span></div></li></ul>
+      </div>
+
+    
+      <div class="feature" data-reveal style="--d:2">
+        <div class="feature__side">
+          <h3>Hedera Hashgraph</h3>
+          <p>Jaringan publik yang menopang token dan kepemilikan karya, dipilih karena biayanya dapat diprediksi pada skala besar.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>CYV di atas Hedera Token Service</b><span>Coin of Your Voice diterbitkan melalui HTS, sehingga jumlah yang beredar dan setiap perpindahannya tercatat rapi.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Jejak peristiwa lewat Hedera Consensus Service</b><span>HCS memberi urutan waktu yang disepakati jaringan, berguna untuk mencatat peristiwa penting secara permanen.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>NFT dari tiga sumber</b><span>NFT Studio menerima karya dari Studio Gambar AI, Studio Musik AI, maupun foto langsung dari kamera, lalu mencetaknya ke jaringan Hedera.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Whitepaper CYV terbuka</b><span>Rancangan token dijelaskan dalam whitepaper yang dapat dibaca langsung dari dalam aplikasi.</span></div></li></ul>
+      </div>
+
+    <div class="cardstrip" id="cs-sm-tech" data-reveal><div class="cardstrip__track" style="--cs-dur:26s"><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Beberapa model dalam satu antarmuka</b><span>Gemini, ChatGPT, Claude, dan DeepSeek dapat dipilih dari daftar yang sama, sehingga pengguna berpindah model tanpa berpindah aplikasi.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Jalur gratis dan jalur berkuota</b><span>Setiap pengguna memperoleh jatah harian, dengan kuota tambahan untuk pemakaian berat. Sisa pemakaian terlihat di Dompet Kuota.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Dua studio generatif</b><span>Studio Gambar AI menyediakan mode Standar dan Pro Ultra HD. Studio Musik AI menyediakan Mode Kilat untuk instrumen dan Mode Vokal untuk lagu bervokal utuh.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Hasil menjadi milik pengguna</b><span>Setiap karya masuk ke Koleksi Saya — siap diputar, diunduh, dibagikan, atau dicetak menjadi NFT.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>CYV di atas Hedera Token Service</b><span>Coin of Your Voice diterbitkan melalui HTS, sehingga jumlah yang beredar dan setiap perpindahannya tercatat rapi.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Jejak peristiwa lewat Hedera Consensus Service</b><span>HCS memberi urutan waktu yang disepakati jaringan, berguna untuk mencatat peristiwa penting secara permanen.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>NFT dari tiga sumber</b><span>NFT Studio menerima karya dari Studio Gambar AI, Studio Musik AI, maupun foto langsung dari kamera, lalu mencetaknya ke jaringan Hedera.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Whitepaper CYV terbuka</b><span>Rancangan token dijelaskan dalam whitepaper yang dapat dibaca langsung dari dalam aplikasi.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Beberapa model dalam satu antarmuka</b><span>Gemini, ChatGPT, Claude, dan DeepSeek dapat dipilih dari daftar yang sama, sehingga pengguna berpindah model tanpa berpindah aplikasi.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Jalur gratis dan jalur berkuota</b><span>Setiap pengguna memperoleh jatah harian, dengan kuota tambahan untuk pemakaian berat. Sisa pemakaian terlihat di Dompet Kuota.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Dua studio generatif</b><span>Studio Gambar AI menyediakan mode Standar dan Pro Ultra HD. Studio Musik AI menyediakan Mode Kilat untuk instrumen dan Mode Vokal untuk lagu bervokal utuh.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Hasil menjadi milik pengguna</b><span>Setiap karya masuk ke Koleksi Saya — siap diputar, diunduh, dibagikan, atau dicetak menjadi NFT.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>CYV di atas Hedera Token Service</b><span>Coin of Your Voice diterbitkan melalui HTS, sehingga jumlah yang beredar dan setiap perpindahannya tercatat rapi.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Jejak peristiwa lewat Hedera Consensus Service</b><span>HCS memberi urutan waktu yang disepakati jaringan, berguna untuk mencatat peristiwa penting secara permanen.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>NFT dari tiga sumber</b><span>NFT Studio menerima karya dari Studio Gambar AI, Studio Musik AI, maupun foto langsung dari kamera, lalu mencetaknya ke jaringan Hedera.</span></div><div class="cscard"><span class="cscard__k">SOSMEDPLUS</span><b>Whitepaper CYV terbuka</b><span>Rancangan token dijelaskan dalam whitepaper yang dapat dibaca langsung dari dalam aplikasi.</span></div></div></div>
+
+    
+      <div class="feature" data-reveal style="--d:1">
+        <div class="feature__side">
+          <h3>Kendali di tangan pengguna</h3>
+          <p>Sebagian teknologi terbaik justru bekerja dengan menahan diri. Ini yang menjaga aplikasi tetap nyaman dipakai setiap hari.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Jam Tenang</b><span>Notifikasi dimatikan otomatis pada rentang jam yang kamu tentukan sendiri.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Kata yang Dibisukan</b><span>Filter kata untuk menyaring isi linimasa sesuai batas kenyamananmu.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Daftar &amp; Komunitas</b><span>Akun pilihan dapat dikelompokkan ke dalam daftar tersendiri, dan diskusi topik punya ruangnya sendiri.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Blokir dan akun privat</b><span>Kelola siapa yang boleh menghubungi dan melihat unggahanmu, sampai ke tingkat unggahan.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Tren Sekarang</b><span>Tagar populer 48 jam terakhir ditampilkan terbuka, sehingga percakapan yang sedang ramai mudah ditemukan.</span></div></li></ul>
+      </div>
+
+    
+      <div class="feature" data-reveal style="--d:2">
+        <div class="feature__side">
+          <h3>Penampil portal terkelola</h3>
+          <p>Kanal portal berjalan di lapisan yang berbeda dari AI Studio, dengan pengelolaan yang tetap berada di tangan pengguna.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Portal dibuka apa adanya</b><span>Situs pihak ketiga tampil sebagaimana aslinya. Aplikasi berperan sebagai penampil dan tidak mengubah isi maupun tampilannya.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Bersihkan Cache Browser</b><span>Cache dari YouTube, portal berita, dan situs lain dapat dibersihkan dari dalam aplikasi, tanpa menyentuh foto milik pengguna.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Jelajah Dunia</b><span>Pencarian umum tetap tersedia bagi pengguna yang ingin melangkah ke luar daftar portal.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>TV Live dan Bioskop</b><span>Kanal siaran langsung dan tontonan berjalan di dalam penampil yang sama.</span></div></li></ul>
+      </div>
+
+    
+      <div class="feature" data-reveal style="--d:1">
+        <div class="feature__side">
+          <h3>Fitur bantu sehari-hari</h3>
+          <p>Beberapa hal kecil yang lahir dari kebutuhan nyata pengguna di lapangan.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Lacak HP Teman</b><span>Membantu menemukan ponsel yang hilang dengan bantuan orang terdekat.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Tersimpan</b><span>Unggahan penting dapat disimpan dan dibuka kembali kapan saja.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Manual Book</b><span>Panduan lengkap seluruh fitur tersedia di dalam aplikasi.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Pilihan bahasa</b><span>Antarmuka dapat diganti bahasanya langsung dari menu.</span></div></li></ul>
+      </div>
+  </div>
+</section>
+
+<!-- ============ SAFE RAJA AMPAT ============ -->
+<section class="section" id="safe">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="marker">Safe Raja Ampat · Data lapangan</span>
+      <h2>Dibangun untuk lokasi tempat jaringan tidak bisa diandalkan.</h2>
+    </div>
+
+    
+      <div class="feature" data-reveal style="--d:1">
+        <div class="feature__side">
+          <h3>Offline-first dan sinkronisasi</h3>
+          <p>Petugas mengisi data di lokasi bencana, sering kali di titik tanpa sinyal sama sekali.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Data tersimpan lebih dulu di perangkat</b><span>Formulir dan survei tetap dapat diisi tanpa jaringan, lalu tersinkronisasi otomatis saat perangkat kembali online.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Laporan tidak hilang saat koneksi terputus</b><span>Isian tersimpan bertahap, sehingga pekerjaan setengah jalan tetap aman.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Survei yang dibuat sendiri</b><span>Admin menyusun template survei sesuai kebutuhan hari itu, dan petugas mengisinya di lapangan.</span></div></li></ul>
+      </div>
+
+    
+      <div class="feature" data-reveal style="--d:2">
+        <div class="feature__side">
+          <h3>Formulir terstruktur standar nasional</h3>
+          <p>Yang biasanya diisi di atas kertas kini terisi langsung di lokasi, dalam format yang sudah dikenal seluruh jajaran.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Pengumpulan Data (Format-2)</b><span>Instrumen data awal korban, pengungsi, dan kebutuhan.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Laporan Awal (Format-4)</b><span>Hasil pengkajian cepat dalam 24 jam pertama.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Laporan Lanjutan (Format-6)</b><span>Pembaruan berkala situasi dan kebutuhan tanggap darurat.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Laporan Harian Pusdalops</b><span>Rekap harian situasi, prakiraan cuaca, dan gelombang.</span></div></li></ul>
+      </div>
+
+    <div class="cardstrip" id="cs-safe-tech" data-reveal><div class="cardstrip__track" style="--cs-dur:22s"><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Data tersimpan lebih dulu di perangkat</b><span>Formulir dan survei tetap dapat diisi tanpa jaringan, lalu tersinkronisasi otomatis saat perangkat kembali online.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan tidak hilang saat koneksi terputus</b><span>Isian tersimpan bertahap, sehingga pekerjaan setengah jalan tetap aman.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Survei yang dibuat sendiri</b><span>Admin menyusun template survei sesuai kebutuhan hari itu, dan petugas mengisinya di lapangan.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Pengumpulan Data (Format-2)</b><span>Instrumen data awal korban, pengungsi, dan kebutuhan.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan Awal (Format-4)</b><span>Hasil pengkajian cepat dalam 24 jam pertama.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan Lanjutan (Format-6)</b><span>Pembaruan berkala situasi dan kebutuhan tanggap darurat.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan Harian Pusdalops</b><span>Rekap harian situasi, prakiraan cuaca, dan gelombang.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Data tersimpan lebih dulu di perangkat</b><span>Formulir dan survei tetap dapat diisi tanpa jaringan, lalu tersinkronisasi otomatis saat perangkat kembali online.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan tidak hilang saat koneksi terputus</b><span>Isian tersimpan bertahap, sehingga pekerjaan setengah jalan tetap aman.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Survei yang dibuat sendiri</b><span>Admin menyusun template survei sesuai kebutuhan hari itu, dan petugas mengisinya di lapangan.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Pengumpulan Data (Format-2)</b><span>Instrumen data awal korban, pengungsi, dan kebutuhan.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan Awal (Format-4)</b><span>Hasil pengkajian cepat dalam 24 jam pertama.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan Lanjutan (Format-6)</b><span>Pembaruan berkala situasi dan kebutuhan tanggap darurat.</span></div><div class="cscard"><span class="cscard__k">SAFE RAJA AMPAT</span><b>Laporan Harian Pusdalops</b><span>Rekap harian situasi, prakiraan cuaca, dan gelombang.</span></div></div></div>
+
+    
+      <div class="feature" data-reveal style="--d:1">
+        <div class="feature__side">
+          <h3>Sumber data eksternal</h3>
+          <p>Informasi yang menyangkut keselamatan diambil dari penyedia yang dapat dipertanggungjawabkan.</p>
+        </div>
+        <ul class="speclist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Peta dan rute</b><span>Titik penting seperti rumah sakit dan dermaga ditampilkan di peta, lengkap dengan rute menuju lokasi terdekat.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Prakiraan cuaca</b><span>Data cuaca tiga hari ke depan per tiga jam bersumber dari OpenWeatherMap.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><div><b>Nomor layanan resmi</b><span>Panggilan darurat terhubung langsung ke 112, 117, 110, 113, 119, dan 115.</span></div></li></ul>
+      </div>
+  </div>
+</section>
+
+<!-- ============ TUMPUKAN TEKNOLOGI ============ -->
+<section class="section section--panel">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="marker">Tumpukan teknologi</span>
+      <h2>Apa yang kami pakai, dan kenapa.</h2>
+    </div>
+    <div class="grid-4">
+      <div class="tile" data-reveal style="--d:1">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.4 17.4 3 12l5.4-5.4M15.6 6.6 21 12l-5.4 5.4M13.6 3.6l-3.2 16.8"/></svg></span>
+        <h3>Flutter</h3>
+        <p>Satu basis kode untuk Android dan web. Perbaikan cukup dikerjakan sekali, sehingga biaya pemeliharaan jauh lebih rendah bagi klien.</p>
+      </div>
+      <div class="tile" data-reveal style="--d:2">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 18.6a4.4 4.4 0 0 1-.4-8.8 5.6 5.6 0 0 1 10.8-1.2 4 4 0 0 1 .6 8z"/></svg></span>
+        <h3>Supabase &amp; PostgreSQL</h3>
+        <p>Basis data relasional yang matang dengan keamanan tingkat baris, sehingga satu instansi hanya melihat datanya sendiri.</p>
+      </div>
+      <div class="tile" data-reveal style="--d:3">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.4" y="10.2" width="15.2" height="10.6" rx="2.4"/><path d="M8.2 10.2V7.4a3.8 3.8 0 0 1 7.6 0v2.8"/></svg></span>
+        <h3>Hedera Hashgraph</h3>
+        <p>Menopang token CYV, jejak peristiwa, dan pencetakan NFT. Biaya transaksinya dapat diprediksi, sehingga skala besar tetap terencana.</p>
+      </div>
+      <div class="tile" data-reveal style="--d:4">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.4 2.8 4.6 13.6h6.2l-1.2 7.6 8.8-10.8h-6.2z"/></svg></span>
+        <h3>API model AI</h3>
+        <p>Gemini, ChatGPT, Claude, dan DeepSeek dipanggil melalui API resmi untuk asisten, gambar, dan musik.</p>
+      </div>
+      <div class="tile" data-reveal style="--d:1">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8V5.5A2.5 2.5 0 0 1 5.5 3H8M16 3h2.5A2.5 2.5 0 0 1 21 5.5V8M21 16v2.5a2.5 2.5 0 0 1-2.5 2.5H16M8 21H5.5A2.5 2.5 0 0 1 3 18.5V16"/><circle cx="12" cy="10.6" r="2.3"/><path d="M8.2 16.4a4.2 4.2 0 0 1 7.6 0"/></svg></span>
+        <h3>Pengenalan wajah</h3>
+        <p>Wajah diubah menjadi kode terenkripsi untuk verifikasi presensi, bukan disimpan sebagai foto.</p>
+      </div>
+      <div class="tile" data-reveal style="--d:2">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10.3" r="2.6"/></svg></span>
+        <h3>Peta &amp; geofencing</h3>
+        <p>Penguncian radius untuk presensi, serta pemetaan titik penting dan rute evakuasi.</p>
+      </div>
+      <div class="tile" data-reveal style="--d:3">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.4 9.4a14 14 0 0 1 19.2 0M5.8 13a9.2 9.2 0 0 1 12.4 0M9.2 16.6a4.4 4.4 0 0 1 5.6 0"/><path d="M12 20.2h.01"/></svg></span>
+        <h3>Offline-first</h3>
+        <p>Data tersimpan di perangkat lebih dulu, lalu tersinkronisasi otomatis begitu jaringan kembali tersedia.</p>
+      </div>
+      <div class="tile" data-reveal style="--d:4">
+        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.8H7a2 2 0 0 0-2 2v14.4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7.8z"/><path d="M14 2.8V8h5"/><path d="M8.6 13h6.8M8.6 16.6h4.4"/></svg></span>
+        <h3>Enkripsi SSL/TLS</h3>
+        <p>Seluruh transmisi antara aplikasi, dashboard, dan server dilindungi protokol enkripsi standar.</p>
+      </div>
+    </div>
+
+    <p class="muted" data-reveal style="font-size:.86rem;margin-top:28px;max-width:64ch">Nama dan merek layanan pihak ketiga adalah milik pemiliknya masing-masing. DIBSEN TECH menggunakan layanan tersebut melalui jalur resmi dan tidak berafiliasi dengan, tidak disponsori oleh, maupun mewakili perusahaan-perusahaan tersebut.</p>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="mesh" aria-hidden="true">
+    <span class="blob blob--amber"></span><span class="blob blob--rust"></span>
+    <span class="blob blob--cobalt"></span><span class="blob blob--warm"></span>
+  </div>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="container cta__inner">
+    <span class="marker" data-reveal>Mulai dari sini</span>
+    <h2 data-reveal style="--d:1">Siap membawa instansi, usaha, atau ide Anda melangkah ke <em>masa depan?</em></h2>
+    <p class="lead" data-reveal style="--d:2">Ceritakan apa yang ingin Anda bangun, atau proses apa yang masih berjalan di atas kertas. Kami balas dalam satu hari kerja, dan kalau memang belum cocok, kami sampaikan sejak awal.</p>
+    <div class="cta__row" data-reveal style="--d:3">
+      <a class="btn btn--amber btn--lg" href="/contact">Jadwalkan diskusi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--line btn--lg" href="https://wa.me/6282112515277?text=Halo%20Tim%20DIBSEN%20TECH%2C%20saya%20tertarik%20mendiskusikan%20pembuatan%20website%20atau%20aplikasi." rel="noopener" target="_blank">Chat WhatsApp</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a class="wordmark" href="/">
+          <span class="wordmark__tile" aria-hidden="true"><img src="/assets/dibsen-icon.png" alt=""></span>
+          <span class="wordmark__text">DIBSEN TECH</span>
+        </a>
+        <p class="footer__blurb">Digital Innovation Base &amp; Software Engineering Network. Studio rekayasa perangkat lunak lintas platform dari Raja Ampat, Papua Barat Daya.</p>
+      </div>
+      <div class="footer__col">
+        <b>Halaman</b>
+        <a href="/">Beranda</a><a href="/products">Produk</a><a href="/services">Layanan</a><a href="/technologies">Teknologi</a>
+        <a href="/about-us">Tentang</a><a href="/contact">Kontak</a>
+        <a href="/privacy-policy">Kebijakan Privasi</a>
+      </div>
+      <div class="footer__col">
+        <b>Aplikasi</b>
+        <a href="https://play.google.com/store/apps/details?id=xyz.sipnex.app" rel="noopener" target="_blank">SIPneX di Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dibsen.warganet_life" rel="noopener" target="_blank">SosMedPlus di Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat" rel="noopener" target="_blank">Safe Raja Ampat</a>
+        <span style="margin-top:16px">info@support.dibsen.io</span>
+        <a href="https://wa.me/6282112515277?text=Halo%20Tim%20DIBSEN%20TECH%2C%20saya%20tertarik%20mendiskusikan%20pembuatan%20website%20atau%20aplikasi." rel="noopener" target="_blank">+62 821-1251-5277</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>© 2026 DIBSEN TECH · Raja Ampat, Indonesia</span>
+      <span>Dibangun di Papua Barat Daya</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var doc = document, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = doc.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window) || reduce) {
+    for (var i = 0; i < items.length; i++) items[i].classList.add('is-in');
+  } else {
+    var io = new IntersectionObserver(function (e) {
+      e.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('is-in'); io.unobserve(x.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  }
+  var t = doc.getElementById('navToggle');
+  doc.querySelectorAll('.nav__links a').forEach(function (a) {
+    a.addEventListener('click', function () { t.checked = false; });
+  });
+  var form = doc.getElementById('bookingForm');
+  if (form) {
+    var btn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var req = form.querySelectorAll('[required]');
+      for (var i = 0; i < req.length; i++) {
+        if (!req[i].value.trim() || (req[i].type === 'email' && req[i].value.indexOf('@') < 1)) {
+          req[i].focus(); req[i].style.borderColor = '#de3b3d'; return;
+        }
+      }
+      btn.disabled = true; btn.textContent = 'Mengirim...';
+      fetch(form.action, { method: 'POST', body: new FormData(form) })
+        .then(function (r) { return r.json(); })
+        .then(function (r) {
+          if (!r.success) throw new Error();
+          form.classList.add('is-sent');
+          form.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        })
+        .catch(function () { btn.disabled = false; btn.textContent = 'Gagal — coba lagi atau email kami'; });
+    });
+    form.addEventListener('input', function (e) { e.target.style.borderColor = ''; });
+  }
+})();
+</script>
+<script src="/assets/i18n.js?v=spectrum23"></script>
+<script src="/assets/ribbon.js?v=spectrum3" defer></script>
+<script src="/assets/three.min.js?v=0.160.1" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js'"></script>
+<script src="/assets/tech-constellation.js?v=3" defer></script>
+<!-- Speculation Rules (2026-09-05) — siapkan halaman tujuan lebih awal.
+     Setelannya sengaja hati-hati supaya tidak membatalkan penghematan
+     bobot yang baru dikerjakan:
+       prefetch  "moderate"     -> saat kursor menggantung di sebuah tautan,
+                                   HANYA dokumen HTML-nya (16-63 KB) yang
+                                   diambil. Murah.
+       prerender "conservative" -> baru saat tombol tikus DITEKAN, yaitu
+                                   ketika pengunjung sudah jelas mau pergi.
+                                   Halaman disiapkan penuh (termasuk video
+                                   hero-nya), jadi tidak ada unduhan besar
+                                   yang terbuang untuk halaman yang cuma
+                                   dilewati kursor.
+     href_matches "/*" hanya cocok untuk tautan sesama domain, jadi tautan
+     WhatsApp dan Google Play tidak ikut tersentuh. -->
+<script type="speculationrules">
+{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}],
+ "prerender":[{"where":{"href_matches":"/*"},"eagerness":"conservative"}]}
+</script>
+</body>
+</html>
