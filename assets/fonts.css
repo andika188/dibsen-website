@@ -1,0 +1,23 @@
+/* DIBSEN TECH Typography - High-Performance Zero-Latency Font Stack */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: local('Bricolage Grotesque'), local('Plus Jakarta Sans'), local('Segoe UI'), local('Arial');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: local('Plus Jakarta Sans'), local('Segoe UI'), local('Arial');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: local('JetBrains Mono'), local('Cascadia Code'), local('Consolas'), local('Courier New');
+}
+

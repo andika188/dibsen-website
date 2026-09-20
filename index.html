@@ -1,17 +1,18 @@
 <!DOCTYPE html><html lang="id"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){var l;try{l=localStorage.getItem('dt-lang')}catch(e){}
-if(l!=='id'&&l!=='en'){var a=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];l='en';
-for(var i=0;i<a.length;i++){if(/^id\b/i.test(a[i]||'')){l='id';break}}}
+if(l!=='id'&&l!=='en')l='id';
 document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);
-if(l==='en'){document.documentElement.className+=' dt-pending';
-setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1500)}})();</script>
-<style>html.dt-pending body{visibility:hidden}</style>
+})();</script>
 
 <title>DIBSEN TECH — Rekayasa Perangkat Lunak untuk Instansi, Usaha &amp; Perorangan</title>
 <meta name="description" content="DIBSEN TECH membangun ekosistem aplikasi web dan mobile yang aman dan terukur untuk instansi pemerintah, usaha, dan perorangan. Tiga produk sudah rilis di Google Play.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0E0614">
 <link rel="canonical" href="https://dibsen.io/">
+<link rel="alternate" hreflang="id" href="https://dibsen.io/">
+<link rel="alternate" hreflang="en" href="https://dibsen.io/">
+<link rel="alternate" hreflang="x-default" href="https://dibsen.io/">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -21,9 +22,15 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
 <meta property="og:description" content="DIBSEN TECH membangun ekosistem aplikasi web dan mobile yang aman dan terukur untuk instansi pemerintah, usaha, dan perorangan. Tiga produk sudah rilis di Google Play.">
 <meta property="og:image" content="https://dibsen.io/assets/dibsen-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DIBSEN TECH — Rekayasa Perangkat Lunak untuk Instansi, Usaha &amp; Perorangan">
+<meta name="twitter:description" content="DIBSEN TECH membangun ekosistem aplikasi web dan mobile yang aman dan terukur untuk instansi pemerintah, usaha, dan perorangan. Tiga produk sudah rilis di Google Play.">
+<meta name="twitter:image" content="https://dibsen.io/assets/dibsen-cover.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "DIBSEN TECH", "alternateName": ["DIBSEN", "Dibsen Tech", "Digital Innovation Base and Software Engineering Network"], "url": "https://dibsen.io/", "publisher": {"@id": "https://dibsen.io/#organization"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://dibsen.io/#organization", "name": "DIBSEN TECH", "legalName": "Digital Innovation Base and Software Engineering Network", "alternateName": "DIBSEN", "url": "https://dibsen.io/", "logo": {"@type": "ImageObject", "url": "https://dibsen.io/assets/logo-dibsen.png", "width": 512, "height": 512}, "image": "https://dibsen.io/assets/dibsen-cover.jpg", "description": "Studio rekayasa perangkat lunak lintas platform dari Raja Ampat. Membangun ekosistem aplikasi web dan mobile yang aman dan terukur untuk instansi pemerintah, usaha, dan perorangan.", "foundingDate": "2025", "address": {"@type": "PostalAddress", "addressLocality": "Waisai, Raja Ampat", "addressRegion": "Papua Barat Daya", "addressCountry": "ID"}, "contactPoint": [{"@type": "ContactPoint", "telephone": "+62-821-1251-5277", "email": "info@support.dibsen.io", "contactType": "sales", "areaServed": "ID", "availableLanguage": ["id", "en"]}], "sameAs": ["https://play.google.com/store/apps/details?id=xyz.sipnex.app", "https://play.google.com/store/apps/details?id=com.dibsen.warganet_life", "https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- Preload hero video untuk improve LCP (2026-09-06) -->
 <!-- 2026-09-06: <link rel="preload" as="video"> untuk hero-main.mp4 DIBUANG.
@@ -39,10 +46,11 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
      footer, dan nama token warnanya berdiri sendiri dan harus dirawat dua kali.
      Urutannya sengaja paling awal: assets/home.css di bawahnya tetap bisa
      menimpanya. -->
-<link rel="stylesheet" href="assets/style.css?v=spectrum22">
-<link rel="stylesheet" href="assets/home.css?v=spectrum24"></head><body>
+<link rel="stylesheet" href="assets/style.css?v=spectrum28">
+<link rel="stylesheet" href="assets/home.css?v=spectrum29"></head><body>
+<a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-<div class="intro"><div class="ipct">0</div><div class="ibar"></div></div>
+<div class="intro" aria-hidden="true"><div class="ipct">0</div><div class="ibar"></div></div>
 
 <!-- Nav bersama, struktur sama persis dengan 6 halaman lain (assets/style.css).
      Bedanya cuma satu class: .nav--float, yang membuat bilahnya mengambang
@@ -53,7 +61,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       <span class="wordmark__tile" aria-hidden="true"><img src="assets/dibsen-icon.png" width="521" height="200" alt=""></span>
       <span class="wordmark__text">DIBSEN TECH</span>
     </a>
-    <input class="nav__cb" type="checkbox" id="navToggle">
+    <input class="nav__cb" type="checkbox" id="navToggle" aria-label="Buka menu navigasi">
     <nav class="nav__links" aria-label="Navigasi utama">
       <a href="/" aria-current="page">Beranda</a>
       <a href="/products">Produk</a>
@@ -63,8 +71,8 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       <a href="/contact">Kontak</a>
     </nav>
     <div class="nav__right">
-      <div class="langsw" role="group" aria-label="Language / Bahasa" translate="no" data-no-i18n><button type="button" data-set-lang="id" aria-label="Bahasa Indonesia">ID</button><button type="button" data-set-lang="en" aria-label="English">EN</button></div>
-      <label class="burger" for="navToggle" aria-label="Buka menu">
+      <div class="langsw" role="group" aria-label="Language / Bahasa" translate="no" data-no-i18n><button type="button" data-set-lang="id" aria-label="ID — Bahasa Indonesia">ID</button><button type="button" data-set-lang="en" aria-label="EN — English">EN</button></div>
+      <label class="burger" for="navToggle">
         <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </label>
@@ -73,32 +81,33 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
   </div>
 </header>
 
+<main id="main">
 <!-- SCROLL HERO (B/E/F/G scrub, D pan) -->
-<section class="stage" id="stage">
+<section class="stage" id="stage" aria-label="Area interaktif hero">
   <div class="pin">
     <!-- src SENGAJA dikosongkan; lihat skrip "muat video seperlunya" di bawah.
          Video ini hanya cadangan untuk browser tanpa WebGL, dan begitu scene
          3D hidup dia langsung display:none — tapi dengan preload="auto" +
          src, browser tetap mengunduhnya PENUH (1,77 MB) di setiap kunjungan
          untuk sesuatu yang tidak pernah dilihat siapa pun. -->
-    <video id="heroVid" autoplay muted loop playsinline preload="none"
+    <video id="heroVid" autoplay muted loop playsinline preload="none" aria-hidden="true"
            poster="assets/sec/hero-poster.jpg?v=5" data-src="assets/sec/hero-main.mp4?v=5"></video>
     <canvas id="archipelago3d" aria-hidden="true"></canvas>
     <div class="hud">
       <div class="hwm" id="hwm"><div class="eye">Digital Transformation · Software Engineering</div><h1>Aplikasi nyata,<br><em>dari Raja Ampat untuk dunia.</em></h1></div>
-      <div class="mobile-hero-actions" aria-label="Jelajahi DIBSEN">
+      <div class="mobile-hero-actions" role="group" aria-label="Jelajahi DIBSEN">
         <a class="btn btn--amber btn--sm" href="/about-us">Tentang DIBSEN</a>
         <a class="btn btn--line btn--sm" href="/products">Lihat Produk</a>
         <button class="btn btn--line btn--sm mobile-tilt-control" id="mobileTilt" type="button" aria-pressed="false">Aktifkan tilt</button>
         <button class="btn btn--line btn--sm mobile-audio-control" id="heroAudio" type="button" aria-pressed="false">Aktifkan suara</button>
       </div>
-      <div class="hcap hcap--dibsen" data-shape="dibsen" role="link" tabindex="0" aria-label="Buka profil DIBSEN TECH"><div class="k">DIBSEN TECH</div><h2>Digital Innovation Base and Software Engineering Network <em>(DIBSEN) Tech</em></h2></div>
-      <div class="hcap hcap--sipnex" data-shape="sipnex" role="link" tabindex="0" aria-label="Buka detail produk SIPneX"><div class="k">02 · SIPneX</div><h2>Integritas data,<br><em>di setiap hadir.</em></h2></div>
-      <div class="hcap hcap--sosialmedia" data-shape="sosmed" role="link" tabindex="0" aria-label="Buka detail produk SosMedPlus"><div class="k">01 · SosMedPlus</div><h2>Suara, karya,<br><em>dan kepemilikan.</em></h2></div>
-      <div class="hcap hcap--safe" data-shape="safe" role="link" tabindex="0" aria-label="Buka detail produk Safe Raja Ampat"><div class="k">03 · Safe Raja Ampat</div><h2>Informasi penting,<br><em>saat paling dibutuhkan.</em></h2></div>
+      <div class="hcap hcap--dibsen" data-shape="dibsen" role="link" tabindex="-1" aria-hidden="true" aria-label="Buka profil DIBSEN TECH"><div class="k">DIBSEN TECH</div><h2>Digital Innovation Base and Software Engineering Network <em>(DIBSEN) Tech</em></h2></div>
+      <div class="hcap hcap--sipnex" data-shape="sipnex" role="link" tabindex="-1" aria-hidden="true" aria-label="Buka detail produk SIPneX"><div class="k">02 · SIPneX</div><h2>Integritas data,<br><em>di setiap hadir.</em></h2></div>
+      <div class="hcap hcap--sosialmedia" data-shape="sosmed" role="link" tabindex="-1" aria-hidden="true" aria-label="Buka detail produk SosMedPlus"><div class="k">01 · SosMedPlus</div><h2>Suara, karya,<br><em>dan kepemilikan.</em></h2></div>
+      <div class="hcap hcap--safe" data-shape="safe" role="link" tabindex="-1" aria-hidden="true" aria-label="Buka detail produk Safe Raja Ampat"><div class="k">03 · Safe Raja Ampat</div><h2>Informasi penting,<br><em>saat paling dibutuhkan.</em></h2></div>
       <div class="sr-only" id="heroA11yStatus" role="status" aria-live="polite">Hero: Aplikasi nyata, dari Raja Ampat untuk dunia.</div>
       <div class="hint" id="hint">Scroll</div>
-      <div class="hero-click-hint" id="heroClickHint"><span>Klik logo untuk menjelajah</span></div>
+      <button type="button" class="hero-click-hint" id="heroClickHint" aria-label="Klik logo untuk menjelajah"><span>Klik logo untuk menjelajah</span></button>
     </div>
     <nav class="hero-dock" id="heroDock" aria-label="Eksplorasi hero">
       <button type="button" data-hero-key="from" data-hero-progress="0.116" aria-label="Kembali ke asal">01 <span>Asal</span></button>
@@ -257,10 +266,10 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
 })();
 </script>
 
-<section class="blk thesis" data-reveal><div class="wrap"><h2>Sistem yang tumbuh bersama organisasi Anda, <em>sejak hari pertama.</em></h2></div></section>
+<section class="blk thesis" data-reveal aria-label="Visi pengembangan"><div class="wrap"><h2>Sistem yang tumbuh bersama organisasi Anda, <em>sejak hari pertama.</em></h2></div></section>
 
 <!-- feature 1 (image 1) -->
-<section class="blk" id="story"><div class="wrap" style="padding-bottom:clamp(20px,4vh,50px)">
+<section class="blk" id="story" aria-label="Ekosistem modular"><div class="wrap" style="padding-bottom:clamp(20px,4vh,50px)">
   <div class="lab" data-reveal>Ekosistem</div>
   <div class="feat" data-reveal>
     <div class="ftext"><div class="k">Rekayasa</div><h3>Cross-platform,<br>dari inti sistem</h3><p>Arsitektur web dan mobile dirancang modular sejak awal, setiap layanan berkembang sendiri tanpa mengganggu yang lain. <b>Satu basis kode, banyak platform.</b></p></div>
@@ -269,17 +278,17 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
 </div></section>
 
 <!-- MIDDLE VIDEO BAND (video 2 — different from the hero) -->
-<section class="blk midband" id="detail">
+<section class="blk midband" id="detail" aria-label="Ketahanan jaringan offline-first">
   <!-- src dikosongkan: video 3,96 MB ini berada jauh di bawah lipatan, tapi
        sebelumnya ikut diunduh saat halaman dibuka. Sekarang baru dimuat
        ketika pengunjung mendekatinya. Poster tetap tampil lebih dulu. -->
-  <video id="midbandVid" autoplay muted loop playsinline preload="none"
+  <video id="midbandVid" autoplay muted loop playsinline preload="none" aria-hidden="true"
          poster="assets/sec/loop-poster.jpg?v=5" data-src="assets/sec/hero.mp4?v=5"></video>
   <div class="mbcap" data-reveal><div class="k">Offline-first</div><h2>Dibangun untuk jaringan<br><em>yang tidak bisa diandalkan.</em></h2></div>
 </section>
 
 <!-- feature 2 (image 2) -->
-<section class="blk"><div class="wrap" style="padding-top:clamp(20px,4vh,50px)">
+<section class="blk" aria-label="Standar keamanan enterprise"><div class="wrap" style="padding-top:clamp(20px,4vh,50px)">
   <div class="feat flip" data-reveal>
     <div class="ftext"><div class="k">Keamanan</div><h3>Standar enterprise,<br>untuk dunia</h3><p>Sistem mengikuti standar keamanan yang dibutuhkan perusahaan dan lembaga publik di mana pun mereka beroperasi, dari autentikasi hingga jejak audit. <b>Siap sejak hari peluncuran.</b></p></div>
     <div class="fimg"><picture><source srcset="assets/g2.webp" type="image/webp"><img src="assets/g2.jpg" width="1000" height="1339" loading="lazy" decoding="async" alt="Ilustrasi standar keamanan enterprise mencakup autentikasi, enkripsi, dan jejak audit untuk perusahaan dan lembaga publik"></picture></div>
@@ -287,7 +296,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
 </div></section>
 
 <!-- IMAGE PLATE (image 3) -->
-<section class="blk plate" data-reveal>
+<section class="blk plate" data-reveal aria-label="Implementasi sistem">
   <picture><source srcset="assets/g3.webp" type="image/webp"><img src="assets/g3.jpg" width="1000" height="1339" loading="lazy" decoding="async" alt="Implementasi produk DIBSEN yang digunakan di instansi pemerintah dan perusahaan untuk transformasi digital yang nyata"></picture>
   <div class="pq"><p>Dari ide, menjadi sistem yang benar-benar dipakai.</p></div>
 </section>
@@ -309,9 +318,9 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       <div><div class="lab" data-i18n="Product Atlas · 01—03">Product Atlas · 01—03</div><h2 id="atlas-title"><span data-i18n="Tiga cara teknologi">Tiga cara teknologi</span><br><em data-i18n="menjaga yang berarti.">menjaga yang berarti.</em></h2></div>
       <p data-i18n="Produk DIBSEN tersedia di Google Play dan terus dikembangkan dari Raja Ampat untuk kebutuhan yang nyata.">Produk DIBSEN tersedia di Google Play dan terus dikembangkan dari Raja Ampat untuk kebutuhan yang nyata.</p>
     </div>
-    <div class="atlas-legend" data-reveal aria-label="Keterangan Product Atlas"><span><b data-i18n="FACT">FACT</b> <span data-i18n="status dan tautan resmi">status dan tautan resmi</span></span><span><b data-i18n="CONCEPT">CONCEPT</b> <span data-i18n="simulator interaktif">simulator interaktif</span></span><span><b data-i18n="ARTEFACT">ARTEFACT</b> <span data-i18n="tampilan build">tampilan build</span></span></div>
+    <div class="atlas-legend" role="group" data-reveal aria-label="Keterangan Product Atlas"><span><b data-i18n="FACT">FACT</b> <span data-i18n="status dan tautan resmi">status dan tautan resmi</span></span><span><b data-i18n="CONCEPT">CONCEPT</b> <span data-i18n="simulator interaktif">simulator interaktif</span></span><span><b data-i18n="ARTEFACT">ARTEFACT</b> <span data-i18n="tampilan build">tampilan build</span></span></div>
     <div class="atlas-grid">
-      <a class="atlas-card atlas-card--social" href="/products/#sosialmedia" data-reveal>
+      <article class="atlas-card atlas-card--social" data-reveal>
         <div class="atlas-card__top"><span class="atlas-index">01</span><span class="atlas-status" data-i18n="Google Play · Dalam pengembangan">Google Play · Dalam pengembangan</span></div>
         <img src="assets/logos/sosialmedia.png" width="240" height="240" loading="lazy" alt="Logo SosMedPlus">
         <div class="atlas-simulator" data-simulator="sosmed" aria-label="Simulator konsep SosMedPlus">
@@ -322,9 +331,9 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
             <button type="button" data-sim-key="milik">Kepemilikan</button>
           </div>
         </div>
-        <div class="atlas-card__copy"><h3>SosMedPlus</h3><p data-i18n="Suara, karya, dan kepemilikan dalam satu ruang sosial yang lebih transparan.">Suara, karya, dan kepemilikan dalam satu ruang sosial yang lebih transparan.</p><span class="atlas-link" data-i18n="Jelajahi produk">Jelajahi produk <b aria-hidden="true">↗</b></span></div>
-      </a>
-      <a class="atlas-card atlas-card--sipnex" href="/products/#sipnex" data-reveal>
+        <div class="atlas-card__copy"><h3>SosMedPlus</h3><p data-i18n="Suara, karya, dan kepemilikan dalam satu ruang sosial yang lebih transparan.">Suara, karya, dan kepemilikan dalam satu ruang sosial yang lebih transparan.</p><a class="atlas-link" href="/products/#sosialmedia" data-i18n="Jelajahi produk">Jelajahi SosMedPlus <b aria-hidden="true">↗</b></a></div>
+      </article>
+      <article class="atlas-card atlas-card--sipnex" data-reveal>
         <div class="atlas-card__top"><span class="atlas-index">02</span><span class="atlas-status" data-i18n="Google Play · Dalam pengembangan">Google Play · Dalam pengembangan</span></div>
         <img src="assets/logos/sipnex.png" width="466" height="240" loading="lazy" alt="Logo SIPneX">
         <div class="atlas-simulator" data-simulator="sipnex" aria-label="Simulator konsep SIPneX">
@@ -335,9 +344,9 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
             <button type="button" data-sim-key="audit">Audit</button>
           </div>
         </div>
-        <div class="atlas-card__copy"><h3>SIPneX</h3><p data-i18n="Presensi dan kinerja yang menjaga integritas data di setiap hadir.">Presensi dan kinerja yang menjaga integritas data di setiap hadir.</p><span class="atlas-link" data-i18n="Jelajahi produk">Jelajahi produk <b aria-hidden="true">↗</b></span></div>
-      </a>
-      <a class="atlas-card atlas-card--safe" href="/products/#safe" data-reveal>
+        <div class="atlas-card__copy"><h3>SIPneX</h3><p data-i18n="Presensi dan kinerja yang menjaga integritas data di setiap hadir.">Presensi dan kinerja yang menjaga integritas data di setiap hadir.</p><a class="atlas-link" href="/products/#sipnex" data-i18n="Jelajahi produk">Jelajahi SIPneX <b aria-hidden="true">↗</b></a></div>
+      </article>
+      <article class="atlas-card atlas-card--safe" data-reveal>
         <div class="atlas-card__top"><span class="atlas-index">03</span><span class="atlas-status" data-i18n="Google Play · Dalam pengembangan">Google Play · Dalam pengembangan</span></div>
         <img src="assets/logos/safe-raja-ampat.png" width="240" height="240" loading="lazy" alt="Logo Safe Raja Ampat">
         <div class="atlas-simulator" data-simulator="safe" aria-label="Simulator konsep Safe Raja Ampat">
@@ -348,12 +357,12 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
             <button type="button" data-sim-key="respons">Respons</button>
           </div>
         </div>
-        <div class="atlas-card__copy"><h3>Safe Raja Ampat</h3><p data-i18n="Informasi keselamatan yang hadir saat paling dibutuhkan.">Informasi keselamatan yang hadir saat paling dibutuhkan.</p><span class="atlas-link" data-i18n="Jelajahi produk">Jelajahi produk <b aria-hidden="true">↗</b></span></div>
-      </a>
+        <div class="atlas-card__copy"><h3>Safe Raja Ampat</h3><p data-i18n="Informasi keselamatan yang hadir saat paling dibutuhkan.">Informasi keselamatan yang hadir saat paling dibutuhkan.</p><a class="atlas-link" href="/products/#safe" data-i18n="Jelajahi produk">Jelajahi Safe Raja Ampat <b aria-hidden="true">↗</b></a></div>
+      </article>
     </div>
     <div class="atlas-proof" data-reveal>
       <div class="atlas-proof__intro"><span class="atlas-index" data-i18n="Artefak 01—03">Artefak 01—03</span><h3><span data-i18n="Yang bisa dilihat">Yang bisa dilihat</span><br><em data-i18n="sekarang.">sekarang.</em></h3><p data-i18n="Antarmuka dari build produk yang sedang dikembangkan. Tersedia di Google Play untuk eksplorasi lebih lanjut.">Antarmuka dari build produk yang sedang dikembangkan. Tersedia di Google Play untuk eksplorasi lebih lanjut.</p></div>
-      <a class="atlas-proof__item atlas-proof__item--sosmed" href="https://play.google.com/store/apps/details?id=com.dibsen.warganet_life" target="_blank" rel="noopener">
+      <a class="atlas-proof__item atlas-proof__item--sosmed" href="https://play.google.com/store/apps/details?id=com.dibsen.warganet_life" target="_blank" rel="noopener noreferrer">
         <div class="phone-mockup">
           <div class="phone-mockup__glow" aria-hidden="true"></div>
           <div class="phone-mockup__frame">
@@ -366,7 +375,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
         </div>
         <span class="atlas-proof__btn" data-i18n="SosMedPlus · Lihat di Google Play ↗">SosMedPlus · Lihat di Google Play ↗</span>
       </a>
-      <a class="atlas-proof__item atlas-proof__item--sipnex" href="https://play.google.com/store/apps/details?id=xyz.sipnex.app" target="_blank" rel="noopener">
+      <a class="atlas-proof__item atlas-proof__item--sipnex" href="https://play.google.com/store/apps/details?id=xyz.sipnex.app" target="_blank" rel="noopener noreferrer">
         <div class="phone-mockup">
           <div class="phone-mockup__glow" aria-hidden="true"></div>
           <div class="phone-mockup__frame">
@@ -379,7 +388,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
         </div>
         <span class="atlas-proof__btn" data-i18n="SIPneX · Lihat di Google Play ↗">SIPneX · Lihat di Google Play ↗</span>
       </a>
-      <a class="atlas-proof__item atlas-proof__item--safe" href="https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat" target="_blank" rel="noopener">
+      <a class="atlas-proof__item atlas-proof__item--safe" href="https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat" target="_blank" rel="noopener noreferrer">
         <div class="phone-mockup">
           <div class="phone-mockup__glow" aria-hidden="true"></div>
           <div class="phone-mockup__frame">
@@ -396,9 +405,10 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
   </div>
 </section>
 
-<section class="blk reserve" id="reserve" data-reveal>
+<section class="blk reserve" id="reserve" data-reveal aria-label="Konsultasi proyek">
   <div class="wrap"><div class="k">DIBSEN TECH · Kontrak proyek</div><h2>Mari bangun sistem Anda.</h2><a class="cta" href="/contact" data-magnetic>Konsultasikan proyek</a></div>
 </section>
+</main>
 
 <!-- Footer bersama, isi dan strukturnya sama dengan 6 halaman lain
      (assets/style.css .footer/.footer__top/.footer__col). Versi lama beranda
@@ -409,8 +419,8 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
   <div class="container">
     <div class="footer__top">
       <div>
-        <a class="wordmark" href="/">
-          <span class="wordmark__tile" aria-hidden="true"><img src="/assets/dibsen-icon.png" width="521" height="200" alt=""></span>
+        <a class="wordmark" href="/" aria-label="DIBSEN TECH, ke beranda">
+          <span class="wordmark__tile" aria-hidden="true"><img src="assets/dibsen-icon.png" width="521" height="200" alt=""></span>
           <span class="wordmark__text">DIBSEN TECH</span>
         </a>
         <p class="footer__blurb">Digital Innovation Base &amp; Software Engineering Network. Studio rekayasa perangkat lunak lintas platform dari Raja Ampat, Papua Barat Daya.</p>
@@ -423,11 +433,11 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       </div>
       <div class="footer__col">
         <b>Aplikasi</b>
-        <a href="https://play.google.com/store/apps/details?id=xyz.sipnex.app" rel="noopener" target="_blank">SIPneX di Google Play</a>
-        <a href="https://play.google.com/store/apps/details?id=com.dibsen.warganet_life" rel="noopener" target="_blank">SosMedPlus di Google Play</a>
-        <a href="https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat" rel="noopener" target="_blank">Safe Raja Ampat di Google Play</a>
-        <span style="margin-top:16px">info@support.dibsen.io</span>
-        <a href="https://wa.me/6282112515277?text=Halo%20Tim%20DIBSEN%20TECH%2C%20saya%20tertarik%20mendiskusikan%20pembuatan%20website%20atau%20aplikasi." rel="noopener" target="_blank">+62 821-1251-5277</a>
+        <a href="https://play.google.com/store/apps/details?id=xyz.sipnex.app" rel="noopener noreferrer" target="_blank">SIPneX di Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dibsen.warganet_life" rel="noopener noreferrer" target="_blank">SosMedPlus di Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat" rel="noopener noreferrer" target="_blank">Safe Raja Ampat di Google Play</a>
+        <a href="mailto:info@support.dibsen.io" style="margin-top:16px">info@support.dibsen.io</a>
+        <a href="https://wa.me/6282112515277?text=Halo%20Tim%20DIBSEN%20TECH%2C%20saya%20tertarik%20mendiskusikan%20pembuatan%20website%20atau%20aplikasi." rel="noopener noreferrer" target="_blank">+62 821-1251-5277</a>
       </div>
     </div>
     <div class="footer__bot">
@@ -467,10 +477,10 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
     });
   })();
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
-<script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js" defer></script>
+<script src="assets/gsap.min.js?v=3.12.5" defer></script>
+<script src="assets/ScrollTrigger.min.js?v=3.12.5" defer></script>
+<script src="assets/lenis.min.js?v=1.1.14" defer></script>
+<script src="assets/split-type.min.js?v=0.3.4" defer></script>
 <script src="_shared/premium2.js?v=spectrum22" defer></script>
 <script>
 /* Dua skrip adegan partikel disuntikkan HANYA kalau __dtUse3D bernilai true
@@ -485,7 +495,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
    alih-alih mengunduh ulang. */
 (function () {
   if (!window.__dtUse3D) return;
-  ['https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js',
+  ['assets/three.min.js?v=0.160.1',
     'assets/dibsen-hero-shapes.js?v=20',
     'assets/dibsen-hero-particles.js?v=25'
   ].forEach(function (u) {
@@ -538,7 +548,27 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       sipnex:'SIPneX: Integritas data, di setiap hadir.',
       safe:'Safe Raja Ampat: Informasi penting, saat paling dibutuhkan.'
     };
-    caps.forEach(function(c){c.setAttribute('aria-hidden','true');});
+    const targetUrls={
+      dibsen:'/about-us',
+      sosmed:'/products#sosialmedia',
+      sipnex:'/products#sipnex',
+      safe:'/products#safe'
+    };
+    caps.forEach(function(c){
+      c.setAttribute('aria-hidden','true');
+      c.setAttribute('tabindex','-1');
+      const navTo=function(){
+        const url=targetUrls[c.dataset.shape];
+        if(url) window.location.href=url;
+      };
+      c.addEventListener('click',navTo);
+      c.addEventListener('keydown',function(e){
+        if(e.key==='Enter'||e.key===' '){
+          e.preventDefault();
+          navTo();
+        }
+      });
+    });
     const updateA11yStatus=function(key){
       if(a11yStatus&&captionText[key]) a11yStatus.textContent='Hero: '+captionText[key];
     };
@@ -547,6 +577,8 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       caps.forEach(function(c){
         const active=key&&c.dataset.shape===key;
         c.classList.toggle('in',active);
+        c.setAttribute('aria-hidden',active?'false':'true');
+        c.setAttribute('tabindex',active?'0':'-1');
         if(active) scrambleReveal(c.querySelector('.k'));
       });
       updateA11yStatus(key);
@@ -564,7 +596,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
         hwm.style.opacity=''; hwm.style.transform='';
         hint.style.opacity='';
         if(stageEl.classList.contains('mobile-interactive')) applyMobileCaption(stageEl.dataset.mobileHeroKey||'from');
-        else caps.forEach(c=>{c.classList.add('in');scrambleReveal(c.querySelector('.k'));});
+        else caps.forEach(c=>{c.classList.add('in');c.setAttribute('aria-hidden','false');c.setAttribute('tabindex','0');scrambleReveal(c.querySelector('.k'));});
         return;
       }
       const hh=stageEl.offsetHeight-innerHeight;
@@ -588,6 +620,8 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       caps.forEach(c=>{
         const willShow=captionKey!==null&&c.dataset.shape===captionKey;
         c.classList.toggle('in',willShow);
+        c.setAttribute('aria-hidden',willShow?'false':'true');
+        c.setAttribute('tabindex',willShow?'0':'-1');
         if(willShow) scrambleReveal(c.querySelector('.k'));
       });
       updateA11yStatus(captionKey||'from');
@@ -660,7 +694,6 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
     addEventListener('resize',updateDock);
     updateDock();
   }
-  addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solid',scrollY>60),{passive:true});
   
 </script>
 <script src="assets/ribbon.js?v=spectrum3" defer></script>

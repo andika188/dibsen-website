@@ -13,7 +13,7 @@
   var DATA = window.DIBSEN_HERO_SHAPES;
   var canvas = document.getElementById('archipelago3d');
   var stageEl = document.getElementById('stage');
-  if (!DATA || !canvas || !stageEl || !window.THREE) { console.warn('[hero3d] belum siap'); return; }
+  if (!DATA || !canvas || !stageEl || !window.THREE) { return; }
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var low = false;
@@ -738,5 +738,4 @@
       isInView: function () { return inView; }
     };
     if (typeof window.updateHeroCaption === 'function') window.updateHeroCaption();
-    console.log('[hero3d] siap (Fase 3):', SHAPE_COUNT, 'bentuk,', N, 'partikel, DPR:', PR);
   })();

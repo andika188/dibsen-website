@@ -23,6 +23,7 @@
    "dan kepemilikan.": "and ownership.",
    "Informasi penting,": "Critical information,",
    "saat paling dibutuhkan.": "when it matters most.",
+   "DIBSEN TECH — platform web & ekosistem digital": "DIBSEN TECH — web platform & digital ecosystem",
   "Mini case study · Design field note": "Mini case study · Design field note",
   "DIBSEN Field Notes · 01—03": "DIBSEN Field Notes · 01—03",
   "Tiga produk dari": "Three products from",

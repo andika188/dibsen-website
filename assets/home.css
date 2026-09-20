@@ -109,10 +109,7 @@ footer>*{position:relative;z-index:1;width:100%}
 /* ---------------------------------------------------------------------------
    BAGIAN 2 — tata letak beranda (dulu <style> inline di index.html)
    --------------------------------------------------------------------------- */
-di bawah tetap bisa menimpanya. -->
-<link rel="stylesheet" href="assets/style.css?v=spectrum13">
-<link rel="stylesheet" href="_shared/premium2.css?v=spectrum13">
-<style>
+
   /* Transisi antar halaman — kembarannya ada di assets/style.css, dan harus
      ada di KEDUA dokumen supaya transisinya jalan. Beranda memakai CSS
      inline sendiri, jadi aturannya diulang di sini. Penjelasan lengkap
@@ -190,7 +187,7 @@ di bawah tetap bisa menimpanya. -->
   .veye{font-size:13px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--on-image);margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
   .vtitle{font-family:var(--display);font-weight:600;font-size:clamp(64px,13vw,180px);line-height:.92;letter-spacing:-.02em;text-shadow:0 4px 50px rgba(0,0,0,.5)}
   .vsub{margin-top:16px;max-width:42ch;font-size:17px;color:var(--white);opacity:.86;text-shadow:0 2px 24px rgba(0,0,0,.5)}
-  .vhint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--white);opacity:.75}
+  .vhint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--white);opacity:.75}
   /* Scrim shaped around where text actually sits, not a blanket over the
      whole frame: heavy on the left where the captions live, clearing by
      mid-frame so the footage stays visible. Measured to hold the amber
@@ -222,15 +219,16 @@ di bawah tetap bisa menimpanya. -->
   .hwm h1{font-family:var(--display);font-weight:600;font-size:clamp(64px,13vw,180px);line-height:.94;letter-spacing:-.02em;text-shadow:0 4px 50px rgba(0,0,0,.5);margin:0}
   .stage.webgl-live .hwm{top:calc(50% - 130px);pointer-events:none}
   .stage.webgl-live .hwm::before{display:none}
-  .stage.webgl-live .hwm h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .stage.webgl-live .hwm h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
   .hwm h1 em{font-style:normal;color:var(--on-image)}
   .mobile-hero-actions{display:none}
   .mobile-tilt-control{display:none}
   .mobile-audio-control{display:none}
   .hcap{position:absolute;left:clamp(20px,5vw,80px);bottom:16%;max-width:30ch;opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;text-shadow:0 2px 30px rgba(0,0,0,.6)}
   .hcap.in{opacity:1;transform:none;pointer-events:auto;cursor:pointer}
+  .hcap:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:8px}
   .hcap.in:hover h2{text-decoration:underline;text-decoration-color:var(--amber);text-underline-offset:6px}
-  .hcap .k{font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--on-image);margin-bottom:12px}
+  .hcap .k{font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--on-image);margin-bottom:12px}
   .hcap h2{font-family:var(--display);font-weight:600;font-size:clamp(21px,2.5vw,32px);line-height:1.08;max-width:16ch}.hcap h2 em{font-style:normal;color:var(--on-image)}
   /* 2026-09-05: the 3 product captions used to all share --on-image (one
      orange for all three) — that was one free colour signal being thrown
@@ -239,7 +237,7 @@ di bawah tetap bisa menimpanya. -->
   .hcap--sipnex .k,.hcap--sipnex h2 em{color:var(--pc-sipnex)}
   .hcap--safe .k,.hcap--safe h2 em{color:var(--pc-saferajaampat)}
   .hcap--dibsen .k,.hcap--dibsen h2 em{color:var(--amber-lit)}
-  .hint{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--white);opacity:.8;transition:opacity .4s}
+  .hint{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--white);opacity:.8;transition:opacity .4s}
   body::before{content:"";position:fixed;inset:-10%;z-index:-1;background:
     radial-gradient(38% 48% at 16% 12%,color-mix(in oklch,var(--amber) 16%,transparent),transparent 60%),
     radial-gradient(44% 54% at 86% 26%,color-mix(in oklch,var(--amber) 11%,transparent),transparent 62%),
@@ -262,7 +260,7 @@ di bawah tetap bisa menimpanya. -->
   .feat:hover .fimg img{transform:scale(1.03)}
   .feat.flip .ftext{order:1}
   .feat.flip .fimg{order:2}
-  .feat .k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+  .feat .k{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
   .feat h3{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.4vw,56px);line-height:1.0;letter-spacing:-.01em}
   .feat p{color:var(--grey);font-size:16.5px;margin-top:18px;max-width:42ch}.feat p b{color:var(--white);font-weight:400}
 /* 2026-09-06: ilustrasi dibungkus <picture> supaya bisa menyajikan WebP
@@ -277,7 +275,7 @@ di bawah tetap bisa menimpanya. -->
   .midband video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .midband::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,color-mix(in oklch,var(--graphite) 30%,transparent),transparent 28%,transparent 55%,color-mix(in oklch,var(--graphite) 72%,transparent))}
   .midband .mbcap{position:absolute;left:0;right:0;bottom:13%;text-align:center;z-index:2;padding:0 24px}
-  .midband .mbcap .k{font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--on-image);margin-bottom:12px;text-shadow:0 2px 22px rgba(0,0,0,.55)}
+  .midband .mbcap .k{font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--on-image);margin-bottom:12px;text-shadow:0 2px 22px rgba(0,0,0,.55)}
   .midband .mbcap h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,4.4vw,58px);line-height:1.02;text-shadow:0 2px 32px rgba(0,0,0,.55)}.midband .mbcap h2 em{font-style:normal;color:var(--on-image)}
   .plate{position:relative;height:92vh;overflow:hidden}
   .plate>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -296,7 +294,7 @@ di bawah tetap bisa menimpanya. -->
   .field-note__head .lab{text-align:left;margin-bottom:20px}.field-note__head h2{font-family:var(--display);font-weight:600;font-size:clamp(42px,6vw,84px);line-height:.96}.field-note__head h2 em{font-style:normal;color:var(--amber-lit)}
   .field-note__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
   .field-note__grid article{padding:28px 28px 12px 0;border-right:1px solid var(--line)}.field-note__grid article+article{padding-left:28px}.field-note__grid article:last-child{border-right:0}
-  .field-note__grid span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}.field-note__grid h3{font-family:var(--display);font-size:clamp(24px,2.5vw,38px);line-height:1.02;margin:22px 0 14px}.field-note__grid p{color:var(--grey);font-size:14px;line-height:1.6;max-width:31ch}
+  .field-note__grid span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}.field-note__grid h3{font-family:var(--display);font-size:clamp(24px,2.5vw,38px);line-height:1.02;margin:22px 0 14px}.field-note__grid p{color:var(--grey);font-size:14px;line-height:1.6;max-width:31ch}
   .atlas{position:relative;padding:clamp(100px,14vh,180px) 0 clamp(110px,16vh,200px);background:color-mix(in oklch,var(--graphite) 92%,transparent);overflow:hidden}
   .atlas::before{content:"";position:absolute;left:50%;top:0;width:1px;height:clamp(50px,8vh,100px);background:linear-gradient(to bottom,var(--amber),transparent);transform:scaleY(0);transform-origin:top;transition:transform 1s var(--ease)}
   .atlas.is-arrived::before{transform:scaleY(1)}
@@ -305,7 +303,7 @@ di bawah tetap bisa menimpanya. -->
   .atlas-head h2{font-family:var(--display);font-weight:600;font-size:clamp(42px,6vw,84px);line-height:.98;letter-spacing:-.02em}
   .atlas-head h2 em{font-style:normal;color:var(--amber-lit)}
   .atlas-head>p{color:var(--grey);font-size:16px;max-width:34ch;padding-bottom:4px}
-  .atlas-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:-30px 0 24px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}.atlas-legend b{color:var(--amber);font-weight:500;margin-right:5px}
+  .atlas-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:-30px 0 24px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}.atlas-legend b{color:var(--amber);font-weight:500;margin-right:5px}
   .atlas-grid{display:grid;grid-template-columns:1.12fr .88fr;grid-template-rows:repeat(2,minmax(250px,1fr));gap:14px}
   .atlas-card{position:relative;display:flex;flex-direction:column;min-height:310px;padding:clamp(20px,3vw,34px);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:var(--white);isolation:isolate;transition:transform .45s var(--ease),border-color .45s ease,box-shadow .45s ease}
   .atlas:not(.is-arrived) .atlas-card{opacity:0;transform:translateY(24px)}
@@ -318,23 +316,24 @@ di bawah tetap bisa menimpanya. -->
   .atlas-card--social{--atlas-rgb:230,168,119;grid-row:span 2;background:linear-gradient(145deg,#3c243d,#1e1027)}
   .atlas-card--sipnex{--atlas-rgb:133,189,91;background:linear-gradient(145deg,#24382c,#141d19)}
   .atlas-card--safe{--atlas-rgb:252,151,0;background:linear-gradient(145deg,#49301d,#21150f)}
-  .atlas-card__top{display:flex;justify-content:space-between;gap:12px;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .atlas-card__top{display:flex;justify-content:space-between;gap:12px;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
   .atlas-index{color:rgba(var(--atlas-rgb),1);font-weight:700}
-  .atlas-status{font-size:9px;letter-spacing:.08em;text-align:right}
+  .atlas-status{font-size:12px;letter-spacing:.08em;text-align:right}
   .atlas-card>img{width:clamp(84px,14vw,170px);height:clamp(84px,14vw,170px);object-fit:contain;margin:auto auto 18px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.28));transition:transform .55s var(--ease)}
   .atlas-card--sipnex>img{width:clamp(150px,23vw,280px);height:auto;max-height:130px}
   .atlas-card:hover>img,.atlas-card:focus-visible>img{transform:scale(1.07) rotate(-3deg)}
   .atlas-card__copy h3{font-family:var(--display);font-size:clamp(26px,3.2vw,46px);line-height:.98;margin-bottom:10px}
   .atlas-card__copy p{color:var(--grey);font-size:14px;line-height:1.55;max-width:35ch}
-  .atlas-link{display:inline-flex;gap:10px;align-items:center;margin-top:20px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(var(--atlas-rgb),1)}
+  .atlas-link{display:inline-flex;gap:10px;align-items:center;margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(var(--atlas-rgb),1)}
   .atlas-link b{font-size:16px;font-weight:400;transition:transform .3s ease}.atlas-card:hover .atlas-link b,.atlas-card:focus-visible .atlas-link b{transform:translate(3px,-3px)}
   .atlas-proof{display:grid;grid-template-columns:minmax(0,1.15fr) repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px);align-items:center;margin-top:clamp(42px,6vw,76px);padding-top:36px;border-top:1px solid var(--line)}
   .atlas:not(.is-arrived) .atlas-proof{opacity:0;transform:translateY(18px)}.atlas.is-arrived .atlas-proof{opacity:1;transform:none;transition:opacity .9s .24s var(--ease),transform .9s .24s var(--ease)}
   @media(prefers-reduced-motion:reduce){.atlas::before,.atlas:not(.is-arrived) .atlas-card,.atlas.is-arrived .atlas-card,.atlas:not(.is-arrived) .atlas-proof,.atlas.is-arrived .atlas-proof{opacity:1;transform:none;transition:none}}
-  .atlas-proof__intro{padding:10px 18px 10px 0}.atlas-proof__intro .atlas-index{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.atlas-proof__intro h3{font-family:var(--display);font-size:clamp(24px,3vw,40px);line-height:.98;margin:20px 0 12px}.atlas-proof__intro h3 em{font-style:normal;color:var(--amber-lit)}.atlas-proof__intro p{font-size:12px;line-height:1.55;color:var(--grey);max-width:25ch}
+  .atlas-proof__intro{padding:10px 18px 10px 0}.atlas-proof__intro .atlas-index{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.atlas-proof__intro h3{font-family:var(--display);font-size:clamp(24px,3vw,40px);line-height:.98;margin:20px 0 12px}.atlas-proof__intro h3 em{font-style:normal;color:var(--amber-lit)}.atlas-proof__intro p{font-size:12px;line-height:1.55;color:var(--grey);max-width:25ch}
 
   /* ---- SMARTPHONE MOCKUP FRAME (Atlas Proof Artefak) ---- */
-  .atlas-proof__item{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;text-decoration:none;color:var(--grey);outline:none}
+  .atlas-proof__item{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;text-decoration:none;color:var(--grey);outline:0}
+  .atlas-proof__item:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:var(--radius-lg)}
   .phone-mockup{position:relative;width:100%;max-width:220px;margin:0 auto;perspective:1000px;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.16,1,.3,1)}
   .phone-mockup__glow{position:absolute;inset:-18px;border-radius:48px;filter:blur(32px);opacity:.32;pointer-events:none;z-index:0;transition:opacity .5s ease,filter .5s ease}
   .atlas-proof__item--sosmed .phone-mockup__glow{background:radial-gradient(circle,rgba(230,168,119,.65),transparent 70%)}
@@ -346,7 +345,7 @@ di bawah tetap bisa menimpanya. -->
   .phone-mockup__screen{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:#08030d}
   .phone-mockup__screen img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:saturate(.95);transition:filter .4s ease,transform .6s var(--ease)}
   .phone-mockup__glare{position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.03) 24%,transparent 50%);pointer-events:none;border-radius:28px}
-  .atlas-proof__btn{display:inline-flex;align-items:center;justify-content:center;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);transition:all .3s ease;white-space:nowrap}
+  .atlas-proof__btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);transition:all .3s ease;white-space:nowrap}
   .atlas-proof__item:hover .atlas-proof__btn,.atlas-proof__item:focus-visible .atlas-proof__btn{color:var(--white);background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);transform:translateY(-2px)}
 
   /* Staggered 3D Floating Perspective on Desktop */
@@ -361,9 +360,9 @@ di bawah tetap bisa menimpanya. -->
 
   .atlas-simulator{margin:auto 0 22px;padding:12px;border:1px solid rgba(var(--atlas-rgb),.28);border-radius:10px;background:rgba(14,6,20,.34);backdrop-filter:blur(8px)}
   .atlas-simulator__screen{display:flex;flex-direction:column;gap:5px;min-height:70px;padding:12px;border-radius:7px;background:rgba(246,239,248,.06)}
-  .atlas-simulator__eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:rgba(var(--atlas-rgb),1)}
-  .atlas-simulator__screen strong{font-family:var(--display);font-size:20px;line-height:1.05}.atlas-simulator__screen span:last-child{font-size:11px;color:var(--grey)}
-  .atlas-simulator__controls{display:flex;gap:6px;margin-top:9px}.atlas-simulator__controls button{flex:1;min-height:34px;padding:6px 7px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--grey);font-family:var(--mono);font-size:9px;cursor:pointer}.atlas-simulator__controls button:hover,.atlas-simulator__controls button:focus-visible{color:var(--white);border-color:rgba(var(--atlas-rgb),.7)}.atlas-simulator__controls button.is-active{color:var(--graphite);background:rgba(var(--atlas-rgb),1);border-color:transparent}
+  .atlas-simulator__eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:rgba(var(--atlas-rgb),1)}
+  .atlas-simulator__screen strong{font-family:var(--display);font-size:20px;line-height:1.05}.atlas-simulator__screen span:last-child{font-size:12px;color:var(--grey)}
+  .atlas-simulator__controls{display:flex;gap:6px;margin-top:9px}.atlas-simulator__controls button{flex:1;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--grey);font-family:var(--mono);font-size:12px;cursor:pointer}.atlas-simulator__controls button:hover,.atlas-simulator__controls button:focus-visible{color:var(--white);border-color:rgba(var(--atlas-rgb),.7)}.atlas-simulator__controls button.is-active{color:var(--graphite);background:rgba(var(--atlas-rgb),1);border-color:transparent}
   .row{display:grid;grid-template-columns:0.8fr 1.2fr;gap:30px;align-items:baseline;padding:42px 0;border-top:1px solid var(--line)}
   .row:last-child{border-bottom:1px solid var(--line)}
   .row .n{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);display:flex;align-items:center;gap:12px}
@@ -374,6 +373,7 @@ di bawah tetap bisa menimpanya. -->
   .reserve .k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
   .reserve h2{font-family:var(--display);font-weight:600;font-size:clamp(44px,8vw,120px);line-height:.94}
   .reserve .cta{display:inline-block;margin-top:34px;font-family:var(--display);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--graphite);background:var(--amber);padding:17px 38px;border-radius:999px;transition:.3s}.reserve .cta:hover{filter:brightness(1.07)}
+  .reserve .cta:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
   .hstrip{overflow:hidden;height:100vh;display:flex;align-items:center}
   .htrack{display:flex;gap:18px;padding:0 8vw;will-change:transform}
   .hpanel{position:relative;flex:0 0 62vw;max-width:760px;aspect-ratio:16/10;border-radius:14px;overflow:hidden}
@@ -497,20 +497,23 @@ di bawah tetap bisa menimpanya. -->
      partikel sebelum berpindah ke halaman produk sungguhan.
    ========================================================================== */
 .hero-click-hint{position:absolute;left:50%;bottom:9%;transform:translate(-50%,10px);z-index:6;
-  opacity:0;pointer-events:none;transition:opacity .4s ease,transform .4s ease;text-align:center}
-.hero-click-hint.show{opacity:1;transform:translate(-50%,0)}
-.hero-click-hint.clickable{pointer-events:auto;cursor:pointer}
-.hero-click-hint span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  opacity:0;pointer-events:none;transition:opacity .4s ease,transform .4s ease;text-align:center;
+  background:transparent;border:0;padding:0;outline:none;-webkit-appearance:none;appearance:none;cursor:pointer}
+.hero-click-hint.show{opacity:1!important;transform:translate(-50%,0)!important}
+.hero-click-hint.clickable{pointer-events:auto!important;cursor:pointer!important}
+.hero-click-hint:focus-visible span{outline:2px solid var(--amber);outline-offset:3px}
+.hero-click-hint span{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--white);padding:11px 22px;border:1px solid var(--line-2);border-radius:999px;
-  background:rgba(14,6,20,.5);backdrop-filter:blur(10px) saturate(140%);display:inline-block;
+  background:rgba(14,6,20,.5);-webkit-backdrop-filter:blur(10px) saturate(140%);backdrop-filter:blur(10px) saturate(140%);display:inline-block;
   transition:border-color .25s ease,background .25s ease}
 .hero-click-hint.clickable:hover span{border-color:var(--amber);background:rgba(14,6,20,.8)}
 .hero-dock{position:absolute;right:clamp(20px,5vw,80px);bottom:28px;z-index:7;display:flex;align-items:center;gap:6px;padding:6px;
   border:1px solid var(--line);border-radius:999px;background:rgba(14,6,20,.48);backdrop-filter:blur(12px) saturate(140%)}
-.hero-dock button{min-width:42px;height:34px;padding:0 9px;border:0;border-radius:999px;background:transparent;color:var(--grey);font-family:var(--mono);font-size:10px;letter-spacing:.08em;cursor:pointer;transition:background .25s ease,color .25s ease,transform .25s ease}
+.hero-dock button{min-width:48px;min-height:48px;padding:0 9px;border:0;border-radius:999px;background:transparent;color:var(--grey);font-family:var(--mono);font-size:12px;letter-spacing:.08em;cursor:pointer;transition:background .25s ease,color .25s ease,transform .25s ease}
 .hero-dock button span{display:none}
   .hero-dock button[aria-current="step"]{min-width:78px}.hero-dock button[aria-current="step"] span{display:inline;margin-left:5px}
 .hero-dock button:hover,.hero-dock button:focus-visible{color:var(--white);background:rgba(246,239,248,.10);transform:translateY(-2px)}
+.hero-dock button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 .hero-dock button[aria-current="step"]{color:var(--graphite);background:var(--amber)}
 .hero-dock button[aria-current="false"]{color:var(--grey)}
 @media(prefers-reduced-motion:reduce){.hero-dock button{transition:none}}
@@ -543,12 +546,12 @@ di bawah tetap bisa menimpanya. -->
     transition:opacity .35s ease,transform .35s ease}
   .stage.webgl-live .hwm::before,html.force-3d-desktop .hwm::before{display:none!important}
   .stage.webgl-live .hwm .eye,html.force-3d-desktop .hwm .eye{
-    font-size:11px!important;font-weight:500!important;letter-spacing:.24em!important;
+    font-size:12px!important;font-weight:500!important;letter-spacing:.24em!important;
     text-transform:uppercase!important;color:var(--on-image)!important;margin-bottom:8px!important;
     text-shadow:0 2px 20px rgba(0,0,0,.9)!important}
   .stage.webgl-live .hwm h1,html.force-3d-desktop .hwm h1{
     position:absolute!important;width:1px!important;height:1px!important;padding:0!important;
-    margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+    margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
   .stage.webgl-live .mobile-hero-actions,html.force-3d-desktop .mobile-hero-actions{display:none!important}
 
   /* Zona 3 (Bawah 72%-92%): Caption produk terfokus di atas thumb zone */
@@ -562,11 +565,21 @@ di bawah tetap bisa menimpanya. -->
   .stage.webgl-live .hcap.in:active h2,html.force-3d-desktop .hcap.in:active h2{
     opacity:.85}
   .stage.webgl-live .hcap .k,html.force-3d-desktop .hcap .k{
-    font-size:11px!important;font-weight:500!important;letter-spacing:.25em!important;
+    font-size:12px!important;font-weight:500!important;letter-spacing:.25em!important;
     text-transform:uppercase!important;margin-bottom:6px!important;text-shadow:0 2px 14px rgba(0,0,0,.9)!important}
   .stage.webgl-live .hcap h2,html.force-3d-desktop .hcap h2{
     font-family:var(--display)!important;font-weight:600!important;font-size:clamp(19px,5.2vw,25px)!important;
     line-height:1.18!important;margin:0 auto!important;max-width:22ch!important}
 
   .stage.webgl-live .hint,html.force-3d-desktop .hint{display:block!important;bottom:3%!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .grain{animation:none;display:none}
+  .footfx .aurora,.footfx .dot{animation:none}
+  body::before{animation:none}
+  .thesis em{animation:none}
+  #zoomFlash{display:none}
+  [data-reveal]{opacity:1;transform:none}
+  .phone-mockup__frame{transform:none!important}
 }
