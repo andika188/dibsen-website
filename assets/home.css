@@ -173,7 +173,7 @@ footer>*{position:relative;z-index:1;width:100%}
      and that is what retires the video. */
   #archipelago3d{position:absolute;inset:0;z-index:3;width:100%;height:100%;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
   #archipelago3d.is-ready{opacity:1}
-  .stage.webgl-live #heroVid{display:none}
+  .stage.webgl-live #heroVid,html.dt-3d .stage #heroVid{display:none!important}
   /* Reduced motion still gets the world — the scene simply renders one static
      frame instead of animating — so it must not be display:none here. */
   @media(prefers-reduced-motion:reduce){
@@ -217,9 +217,9 @@ footer>*{position:relative;z-index:1;width:100%}
   .hwm::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78%;height:230%;z-index:-1;background:radial-gradient(closest-side,color-mix(in oklch,var(--graphite) 72%,transparent),transparent);filter:blur(26px)}
   .hwm .eye{font-size:13px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--on-image);margin-bottom:16px;text-shadow:0 2px 24px rgba(0,0,0,.55)}
   .hwm h1{font-family:var(--display);font-weight:600;font-size:clamp(64px,13vw,180px);line-height:.94;letter-spacing:-.02em;text-shadow:0 4px 50px rgba(0,0,0,.5);margin:0}
-  .stage.webgl-live .hwm{top:calc(50% - 130px);pointer-events:none}
-  .stage.webgl-live .hwm::before{display:none}
-  .stage.webgl-live .hwm h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
+  .stage.webgl-live .hwm,html.dt-3d .stage .hwm{top:calc(50% - 130px);pointer-events:none}
+  .stage.webgl-live .hwm::before,html.dt-3d .stage .hwm::before{display:none}
+  .stage.webgl-live .hwm h1,html.dt-3d .stage .hwm h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
   .hwm h1 em{font-style:normal;color:var(--on-image)}
   .mobile-hero-actions{display:none}
   .mobile-tilt-control{display:none}
@@ -539,17 +539,17 @@ footer>*{position:relative;z-index:1;width:100%}
 
   /* FASE 1: ARSITEKTUR 3-ZONA BEBAS TABRAKAN DI HP
      Zona 1 (Atas 12%-28%): Kicker headline ditempatkan anggun di atas panggung 3D */
-  .stage.webgl-live .hwm,html.force-3d-desktop .hwm{
+  .stage.webgl-live .hwm,html.force-3d-desktop .hwm,html.dt-3d .stage .hwm{
     position:absolute!important;top:13%!important;left:50%!important;transform:translateX(-50%)!important;
     width:90%!important;max-width:440px!important;text-align:center!important;pointer-events:none!important;
     z-index:6!important;margin:0!important;padding:0!important;opacity:1;display:block!important;
     transition:opacity .35s ease,transform .35s ease}
-  .stage.webgl-live .hwm::before,html.force-3d-desktop .hwm::before{display:none!important}
-  .stage.webgl-live .hwm .eye,html.force-3d-desktop .hwm .eye{
+  .stage.webgl-live .hwm::before,html.force-3d-desktop .hwm::before,html.dt-3d .stage .hwm::before{display:none!important}
+  .stage.webgl-live .hwm .eye,html.force-3d-desktop .hwm .eye,html.dt-3d .stage .hwm .eye{
     font-size:12px!important;font-weight:500!important;letter-spacing:.24em!important;
     text-transform:uppercase!important;color:var(--on-image)!important;margin-bottom:8px!important;
     text-shadow:0 2px 20px rgba(0,0,0,.9)!important}
-  .stage.webgl-live .hwm h1,html.force-3d-desktop .hwm h1{
+  .stage.webgl-live .hwm h1,html.force-3d-desktop .hwm h1,html.dt-3d .stage .hwm h1{
     position:absolute!important;width:1px!important;height:1px!important;padding:0!important;
     margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
   .stage.webgl-live .mobile-hero-actions,html.force-3d-desktop .mobile-hero-actions{display:none!important}

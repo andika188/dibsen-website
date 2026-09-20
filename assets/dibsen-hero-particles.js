@@ -33,20 +33,49 @@
   var posI16 = new Int16Array(posBytes.buffer, posBytes.byteOffset, posBytes.byteLength / 2);
   var colBytes = b64ToBytes(DATA.col);
 
-  var shapePos = [], shapeCol = [];
-  for (var s = 0; s < SHAPE_COUNT; s++) {
+  var shapePos = new Array(SHAPE_COUNT), shapeCol = new Array(SHAPE_COUNT);
+  var invPosScale = 1.0 / posScale;
+  var inv255 = 1.0 / 255.0;
+
+  function decodeShape(s) {
+    if (shapePos[s]) return;
     var p = new Float32Array(N * 3), c = new Float32Array(N * 3);
     var posOff = s * FULL_N * 3, colOff = s * FULL_N * 3;
     for (var i = 0; i < N; i++) {
-      p[i * 3] = posI16[posOff + i * 3] / posScale;
-      p[i * 3 + 1] = posI16[posOff + i * 3 + 1] / posScale;
-      p[i * 3 + 2] = posI16[posOff + i * 3 + 2] / posScale;
-      c[i * 3] = colBytes[colOff + i * 3] / 255;
-      c[i * 3 + 1] = colBytes[colOff + i * 3 + 1] / 255;
-      c[i * 3 + 2] = colBytes[colOff + i * 3 + 2] / 255;
+      var i3 = i * 3;
+      var pOff = posOff + i3;
+      var cOff = colOff + i3;
+      p[i3] = posI16[pOff] * invPosScale;
+      p[i3 + 1] = posI16[pOff + 1] * invPosScale;
+      p[i3 + 2] = posI16[pOff + 2] * invPosScale;
+      c[i3] = colBytes[cOff] * inv255;
+      c[i3 + 1] = colBytes[cOff + 1] * inv255;
+      c[i3 + 2] = colBytes[cOff + 2] * inv255;
     }
-    shapePos.push(p); shapeCol.push(c);
+    shapePos[s] = p; shapeCol[s] = c;
   }
+
+  // Bentuk 0 ("From") didekodekan langsung pada frame pertama (cepat & ringan):
+  decodeShape(0);
+
+  // Bentuk 1..4 didekodekan secara progresif di sela-sela waktu senggang (non-blocking):
+  var nextDecodeIndex = 1;
+  function scheduleNextShapeDecode() {
+    if (nextDecodeIndex >= SHAPE_COUNT) return;
+    var s = nextDecodeIndex++;
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function () {
+        decodeShape(s);
+        scheduleNextShapeDecode();
+      }, { timeout: 600 });
+    } else {
+      setTimeout(function () {
+        decodeShape(s);
+        scheduleNextShapeDecode();
+      }, 30);
+    }
+  }
+  scheduleNextShapeDecode();
     function hash(x) { var v = Math.sin(x * 12.9898) * 43758.5453; return v - Math.floor(v); }
 
     var renderer;
@@ -348,6 +377,8 @@
     var curA = -1, curB = -1;
     function setPair(a, b) {
       if (a === curA && b === curB) return;
+      if (!shapePos[a]) decodeShape(a);
+      if (!shapePos[b]) decodeShape(b);
       geo.attributes.aPosA.array.set(shapePos[a]); geo.attributes.aPosB.array.set(shapePos[b]);
       geo.attributes.aColA.array.set(shapeCol[a]); geo.attributes.aColB.array.set(shapeCol[b]);
       geo.attributes.aPosA.needsUpdate = geo.attributes.aPosB.needsUpdate = true;

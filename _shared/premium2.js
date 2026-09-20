@@ -32,7 +32,7 @@
 
   // ---- Lenis smooth scroll + GSAP ScrollTrigger sync ----
   let lenis=null;
-  if(window.Lenis && !reduce){
+  if(window.Lenis && !reduce && matchMedia('(min-width: 901px)').matches){
     lenis=new Lenis({lerp:.09,wheelMultiplier:1,smoothWheel:true});
     window.__lenis=lenis;
     if(window.gsap && window.ScrollTrigger){
@@ -78,7 +78,6 @@
          Dibungkus supaya pemanggilnya selalu menyalakan ticker lebih dulu. */
       var _scrollTo = lenis.scrollTo.bind(lenis);
       lenis.scrollTo = function(){ startTicker(); return _scrollTo.apply(null, arguments); };
-      startTicker();
     }else{requestAnimationFrame(function r(t){lenis.raf(t);requestAnimationFrame(r);});}
   } else if(window.gsap && window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);}
 

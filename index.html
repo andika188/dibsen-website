@@ -3,6 +3,7 @@
 <script>(function(){var l;try{l=localStorage.getItem('dt-lang')}catch(e){}
 if(l!=='id'&&l!=='en')l='id';
 document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);
+try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.getContext('webgl')||c.getContext('experimental-webgl')))document.documentElement.classList.add('dt-3d');}catch(e){}
 })();</script>
 
 <title>DIBSEN TECH — Rekayasa Perangkat Lunak untuk Instansi, Usaha &amp; Perorangan</title>
@@ -28,10 +29,10 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "DIBSEN TECH", "alternateName": ["DIBSEN", "Dibsen Tech", "Digital Innovation Base and Software Engineering Network"], "url": "https://dibsen.io/", "publisher": {"@id": "https://dibsen.io/#organization"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://dibsen.io/#organization", "name": "DIBSEN TECH", "legalName": "Digital Innovation Base and Software Engineering Network", "alternateName": "DIBSEN", "url": "https://dibsen.io/", "logo": {"@type": "ImageObject", "url": "https://dibsen.io/assets/logo-dibsen.png", "width": 512, "height": 512}, "image": "https://dibsen.io/assets/dibsen-cover.jpg", "description": "Studio rekayasa perangkat lunak lintas platform dari Raja Ampat. Membangun ekosistem aplikasi web dan mobile yang aman dan terukur untuk instansi pemerintah, usaha, dan perorangan.", "foundingDate": "2025", "address": {"@type": "PostalAddress", "addressLocality": "Waisai, Raja Ampat", "addressRegion": "Papua Barat Daya", "addressCountry": "ID"}, "contactPoint": [{"@type": "ContactPoint", "telephone": "+62-821-1251-5277", "email": "info@support.dibsen.io", "contactType": "sales", "areaServed": "ID", "availableLanguage": ["id", "en"]}], "sameAs": ["https://play.google.com/store/apps/details?id=xyz.sipnex.app", "https://play.google.com/store/apps/details?id=com.dibsen.warganet_life", "https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="preconnect" href="https://unpkg.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yygg_vb.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2" as="font" type="font/woff2" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=optional" rel="stylesheet">
 <!-- Preload hero video untuk improve LCP (2026-09-06) -->
 <!-- 2026-09-06: <link rel="preload" as="video"> untuk hero-main.mp4 DIBUANG.
      Ditambahkan 6 Sep dengan alasan mempercepat LCP, tapi keliru: video itu
@@ -47,7 +48,7 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
      Urutannya sengaja paling awal: assets/home.css di bawahnya tetap bisa
      menimpanya. -->
 <link rel="stylesheet" href="assets/style.css?v=spectrum28">
-<link rel="stylesheet" href="assets/home.css?v=spectrum29"></head><body>
+<link rel="stylesheet" href="assets/home.css?v=spectrum31"></head><body>
 <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
 <div class="intro" aria-hidden="true"><div class="ipct">0</div><div class="ibar"></div></div>
@@ -120,8 +121,8 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
   </div>
 </section>
 
-<script src="assets/hero-state.js?v=1"></script>
-<script src="assets/hero-audio.js?v=1"></script>
+<script src="assets/hero-state.js?v=1" defer></script>
+<script src="assets/hero-audio.js?v=1" defer></script>
 
 <script>
 /* ==========================================================================
@@ -206,6 +207,7 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
   var force3D = /(?:^|[?&])force3d=1\b/.test(location.search);
   var use3D = webglOK && !softwareGL;
   window.__dtUse3D = use3D;
+  if (use3D) document.documentElement.classList.add('dt-3d');
   if (force3D && use3D) document.documentElement.classList.add('force-3d-desktop');
 
   function heroFallback() {
@@ -447,7 +449,7 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
   </div>
 </footer>
 
-<script src="assets/i18n.js?v=spectrum24"></script>
+<script src="assets/i18n.js?v=spectrum24" defer></script>
 <script src="assets/product-atlas.js?v=2" defer></script>
 <script>
   /* Perilaku nav beranda.
@@ -477,11 +479,9 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
     });
   })();
 </script>
-<script src="assets/gsap.min.js?v=3.12.5" defer></script>
-<script src="assets/ScrollTrigger.min.js?v=3.12.5" defer></script>
 <script src="assets/lenis.min.js?v=1.1.14" defer></script>
 <script src="assets/split-type.min.js?v=0.3.4" defer></script>
-<script src="_shared/premium2.js?v=spectrum22" defer></script>
+<script src="_shared/premium2.js?v=spectrum23" defer></script>
 <script>
 /* Dua skrip adegan partikel disuntikkan HANYA kalau __dtUse3D bernilai true
    (lihat alasannya di skrip "Muat video seperlunya" di atas). async=false
@@ -495,14 +495,23 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
    alih-alih mengunduh ulang. */
 (function () {
   if (!window.__dtUse3D) return;
-  ['assets/three.min.js?v=0.160.1',
-    'assets/dibsen-hero-shapes.js?v=20',
-    'assets/dibsen-hero-particles.js?v=25'
-  ].forEach(function (u) {
-    var s = document.createElement('script');
-    s.src = u; s.async = false;
-    document.head.appendChild(s);
-  });
+  function load3DScripts() {
+    ['assets/three.min.js?v=0.160.1',
+      'assets/dibsen-hero-shapes.js?v=20',
+      'assets/dibsen-hero-particles.js?v=28'
+    ].forEach(function (u) {
+      var s = document.createElement('script');
+      s.src = u; s.async = false;
+      document.head.appendChild(s);
+    });
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(load3DScripts, { timeout: 1200 });
+  } else if (document.readyState === 'complete') {
+    setTimeout(load3DScripts, 30);
+  } else {
+    window.addEventListener('load', function () { setTimeout(load3DScripts, 30); }, { once: true });
+  }
 })();
 </script>
 <script>
@@ -572,7 +581,6 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
     const updateA11yStatus=function(key){
       if(a11yStatus&&captionText[key]) a11yStatus.textContent='Hero: '+captionText[key];
     };
-    scrambleReveal(hwm.querySelector('.eye'));
     const applyMobileCaption=function(key){
       caps.forEach(function(c){
         const active=key&&c.dataset.shape===key;
@@ -601,11 +609,16 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
       }
       const hh=stageEl.offsetHeight-innerHeight;
       const p=Math.max(0,Math.min(1,(scrollY-stageEl.offsetTop)/Math.max(1,hh)));
-      hwm.style.opacity=p<0.10?1:Math.max(0,1-(p-0.10)/0.09);
-      if(stacked.matches){
-        hwm.style.transform=`translate(-50%, -${p*120}px)`;
+      if (p <= 0.001) {
+        hwm.style.opacity = '';
+        hwm.style.transform = '';
       } else {
-        hwm.style.transform=`translate(-50%,calc(-50% - ${p*150}px))`;
+        hwm.style.opacity = p < 0.10 ? 1 : Math.max(0, 1 - (p - 0.10) / 0.09);
+        if (stacked.matches) {
+          hwm.style.transform = `translate(-50%, -${p * 120}px)`;
+        } else {
+          hwm.style.transform = `translate(-50%,calc(-50% - ${p * 150}px))`;
+        }
       }
       hint.style.opacity=p>0.04?0:.7;
       // Caption produk sekarang mengikuti bentuk partikel yang SEDANG TERKUNCI
@@ -696,7 +709,7 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.se
   }
   
 </script>
-<script src="assets/ribbon.js?v=spectrum3" defer></script>
+<script src="assets/ribbon.js?v=spectrum4" defer></script>
 <!-- Speculation Rules (2026-09-05) — siapkan halaman tujuan lebih awal.
      Setelannya sengaja hati-hati supaya tidak membatalkan penghematan
      bobot yang baru dikerjakan:

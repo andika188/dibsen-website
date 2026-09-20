@@ -95,19 +95,29 @@
     ctx.globalAlpha = 1;
   }
 
+  var lastDraw = 0;
+  var isMobile = false;
+  try { isMobile = window.innerWidth <= 900; } catch (e) {}
+  var minInterval = isMobile ? 48 : 32; // ~20fps on mobile, ~30fps on desktop
+
   function loop(now) {
     if (!running) return;
+    requestAnimationFrame(loop);
+    if (now - lastDraw < minInterval) return;
+    lastDraw = now;
     t = now;
     draw();
-    requestAnimationFrame(loop);
   }
 
   size();
-  window.addEventListener('resize', function () { size(); draw(); });
+  draw(); // Render frame pertama seketika
+  window.addEventListener('resize', function () {
+    try { isMobile = window.innerWidth <= 900; minInterval = isMobile ? 48 : 32; } catch (e) {}
+    size(); draw();
+  });
 
   if (reduce) {
     // honour the preference: draw one static frame, redraw only on scroll
-    draw();
     window.addEventListener('scroll', draw, { passive: true });
   } else {
     // stop burning frames while the tab is in the background
@@ -115,6 +125,10 @@
       if (document.hidden) { running = false; }
       else if (!running) { running = true; requestAnimationFrame(loop); }
     });
-    requestAnimationFrame(loop);
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function () { requestAnimationFrame(loop); }, { timeout: 1500 });
+    } else {
+      setTimeout(function () { requestAnimationFrame(loop); }, 300);
+    }
   }
 })();
