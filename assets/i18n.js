@@ -951,7 +951,25 @@
     "Framework Web Modern": "Modern Web Frameworks",
     "Arsitektur Vanilla ESM murni tanpa bloatware, serta React/Next.js dan Vite untuk web app skala besar yang cepat.": "Pure Vanilla ESM architecture free of bloatware, alongside React/Next.js and Vite for scalable, ultra-fast web apps.",
     "Aksesibilitas WCAG & SEO": "WCAG Accessibility & SEO",
-    "Semantik HTML5 murni, kontras terkalibrasi, navigasi keyboard penuh, dan jaminan skor Triple 100 Lighthouse.": "Pure HTML5 semantics, calibrated contrast ratios, full keyboard flow, and guaranteed Triple 100 Lighthouse score."
+    "Semantik HTML5 murni, kontras terkalibrasi, navigasi keyboard penuh, dan jaminan skor Triple 100 Lighthouse.": "Pure HTML5 semantics, calibrated contrast ratios, full keyboard flow, and guaranteed Triple 100 Lighthouse score.",
+    /* --- Fase 3: Homepage Web Spotlight --- */
+    "DIBSEN.TECH · Web Engineering": "DIBSEN.TECH · Web Engineering",
+    "Bukan sekadar aplikasi.": "Not just mobile apps.",
+    "Website terbaik di dunia.": "The best website in the world.",
+    "Kami merekayasa platform web dengan standar visual setara video game dan ketangguhan arsitektur enterprise. Dari WebGL 3D 64.000 partikel, audio sintetis prosedural, hingga navigasi instan 0 milidetik dengan skor Triple 100 Lighthouse — dibsen.io adalah bukti empiris standar rekayasa web kami.": "We engineer web platforms with video-game level visual benchmarks and enterprise architectural resilience. From 64,000-particle 3D WebGL, procedural synthetic audio, to instant 0-millisecond navigation with a Triple 100 Lighthouse score — dibsen.io is empirical proof of our web engineering standards.",
+    "Triple 100 Lighthouse": "Triple 100 Lighthouse",
+    "Performa · Aksesibilitas · SEO": "Performance · Accessibility · SEO",
+    "Partikel GPU WebGL": "GPU WebGL Particles",
+    "Engine Real-time 60 FPS": "Real-time 60 FPS Engine",
+    "Navigasi Spekulatif": "Speculative Navigation",
+    "Pemuatan Halaman 0 ms": "0 ms Page Load Latency",
+    "Eksplorasi Solusi Web ↗": "Explore Web Solutions ↗",
+    "Baca Case Study Teknis ↗": "Read Technical Case Study ↗",
+    "Tampilan arsitektur dan antarmuka web DIBSEN": "DIBSEN web architecture and interface showcase",
+    "Three.js & WebGL 2.0": "Three.js & WebGL 2.0",
+    "Three.js &amp; WebGL 2.0": "Three.js & WebGL 2.0",
+    "Audio Prosedural": "Procedural Audio",
+    "Jaminan Nol CLS": "Zero CLS Guarantee"
   };
   
 
