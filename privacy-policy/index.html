@@ -79,7 +79,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       <div class="toc" data-reveal><b>Daftar isi</b><b style="margin-top:var(--s5)">SIPneX</b><a href="#sipnex-s1">1. Informasi yang Kami Kumpulkan</a><a href="#sipnex-s2">2. Tujuan Penggunaan Informasi</a><a href="#sipnex-s3">3. Keamanan Data</a><a href="#sipnex-s4">4. Berbagi Informasi dengan Pihak Ketiga</a><a href="#sipnex-s5">5. Izin Akses Perangkat</a><a href="#sipnex-s6">6. Hak Pengguna</a><a href="#sipnex-s7">7. Perubahan Kebijakan</a><a href="#sipnex-s8">8. Hubungi Kami</a><b style="margin-top:var(--s5)">SosMedPlus</b><a href="#sm-s1">1. Informasi yang Kami Kumpulkan</a><a href="#sm-s2">2. Bagaimana Kami Menggunakan Informasi Anda</a><a href="#sm-s3">3. Layanan Pihak Ketiga</a><a href="#sm-s4">4. Iklan Dalam Aplikasi</a><a href="#sm-s5">5. Moderasi Konten dan UGC</a><a href="#sm-s6">6. Keamanan Data</a><a href="#sm-s7">7. Hak Penghapusan Data dan Akun</a><a href="#sm-s8">8. Privasi Anak-Anak</a><a href="#sm-s9">9. Perubahan Kebijakan</a><a href="#sm-s10">10. Hubungi Kami</a></div>
 
       <div>
-        <div class="doc__app" id="sipnex" data-reveal>
+        <div class="doc__app" id="sipnex">
           <div class="doc__app-head"><img src="/assets/logos/sipnex.png" alt="" width="44" height="44" loading="lazy" decoding="async"><h2 class="doc__app-name">SIPneX</h2></div>
           <div class="doc__meta">
             <span>Dokumen: Kebijakan Privasi SIPneX</span>
@@ -105,7 +105,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
 </div>
         </div>
 
-        <div class="doc__app" id="sosialmedia" data-reveal>
+        <div class="doc__app" id="sosialmedia">
           <div class="doc__app-head"><img src="/assets/logos/sosialmedia.png" alt="" width="44" height="44" loading="lazy" decoding="async"><h2 class="doc__app-name">SosMedPlus</h2></div>
           <div class="doc__meta">
             <span>Dokumen: Kebijakan Privasi SosMedPlus</span>
@@ -178,7 +178,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
   } else {
     var io = new IntersectionObserver(function (e) {
       e.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('is-in'); io.unobserve(x.target); } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    }, { rootMargin: '0px 0px -4% 0px', threshold: 0.02 });
     items.forEach(function (el) { io.observe(el); });
   }
   var t = doc.getElementById('navToggle');
