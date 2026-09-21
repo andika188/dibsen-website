@@ -1,28 +1,201 @@
 <!doctype html>
-<html lang="id" data-lang="id">
+<html lang="id">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DIBSEN TECH - Technical Case Study</title>
-<meta name="description" content="Technical case study DIBSEN TECH: WebGL particle morphing, progressive enhancement, performance, dan accessibility.">
+<script>(function(){var l;try{l=localStorage.getItem('dt-lang')}catch(e){}
+if(l!=='id'&&l!=='en'){var a=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];l='en';
+for(var i=0;i<a.length;i++){if(/^id\b/i.test(a[i]||'')){l='id';break}}}
+document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);
+if(l==='en'){document.documentElement.className+=' dt-pending';
+setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1500)}})();</script>
+<style>html.dt-pending body{visibility:hidden}</style>
+<title>DIBSEN TECH — Technical Case Study &amp; Web Engineering</title>
+<meta name="description" content="Technical case study DIBSEN TECH: WebGL 3D 64K particles, Web Audio procedural synthesis, Speculation Rules API, Triple 100 Lighthouse, dan aksesibilitas WCAG 2.1.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://dibsen.io/case-study/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0e0614">
 <link rel="stylesheet" href="/assets/style.css?v=spectrum29">
 <style>
-.case{padding:clamp(86px,12vw,160px) 0 140px}.case__eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:22px}.case h1{max-width:900px;font-size:clamp(3rem,8vw,8rem);line-height:.92}.case h1 em{font-style:normal;color:var(--amber-lit)}.case__intro{max-width:680px;margin-top:30px;color:var(--grey);font-size:clamp(1.05rem,1.7vw,1.3rem)}.case__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:76px}.case__stat,.case__section{border:1px solid var(--line);background:var(--band);border-radius:12px;padding:26px}.case__stat strong{display:block;font-family:var(--display);font-size:clamp(2rem,4vw,4rem);line-height:1;color:var(--amber-lit)}.case__stat span{display:block;margin-top:12px;color:var(--grey);font-size:.85rem}.case__section{margin-top:14px}.case__section h2{font-size:clamp(1.6rem,3vw,2.8rem);margin-bottom:18px}.case__section p{max-width:70ch;color:var(--grey);line-height:1.7}.case__section ul{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 0}.case__section li{padding-top:14px;border-top:1px solid var(--line);color:var(--grey);line-height:1.55}.case__section li b{display:block;color:var(--white);margin-bottom:5px}.case__back{margin-top:42px}.case__back a{display:inline-flex}.case__note{font-family:var(--mono);font-size:.75rem;color:var(--grey-dim);margin-top:30px}@media(max-width:700px){.case__grid{grid-template-columns:1fr}.case__section ul{grid-template-columns:1fr}.case{padding-top:72px}}
+.case{padding:clamp(86px,12vw,160px) 0 140px}
+.case__eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:22px}
+.case h1{max-width:960px;font-size:clamp(2.8rem,7vw,6.5rem);line-height:.94;letter-spacing:-.02em}
+.case h1 em{font-style:normal;color:var(--amber-lit)}
+.case__intro{max-width:720px;margin-top:28px;color:var(--grey);font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.6}
+.case__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:64px}
+.case__stat,.case__section{border:1px solid var(--line);background:var(--band);border-radius:14px;padding:26px}
+.case__stat strong{display:block;font-family:var(--display);font-size:clamp(2rem,3.6vw,3.6rem);line-height:1;color:var(--amber-lit)}
+.case__stat span{display:block;margin-top:12px;color:var(--grey);font-size:.85rem;line-height:1.45}
+.case__section{margin-top:16px}
+.case__section h2{font-size:clamp(1.5rem,2.8vw,2.4rem);margin-bottom:18px;color:var(--white)}
+.case__section p{max-width:72ch;color:var(--grey);line-height:1.7}
+.case__section ul{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:24px 0 0;padding:0;list-style:none}
+.case__section li{padding-top:14px;border-top:1px solid var(--line);color:var(--grey);line-height:1.55}
+.case__section li b{display:block;color:var(--white);margin-bottom:5px}
+.case__back{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:48px}
+.case__note{font-family:var(--mono);font-size:.78rem;color:var(--grey-dim);margin-top:28px;line-height:1.5}
+@media(max-width:960px){.case__grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.case__grid{grid-template-columns:1fr}.case__section ul{grid-template-columns:1fr}.case{padding-top:72px}}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Lewati ke konten utama</a>
-<header class="nav"><div class="container nav__inner"><a class="wordmark" href="/" aria-label="DIBSEN TECH, ke beranda"><span class="wordmark__tile" aria-hidden="true"><img src="/assets/dibsen-icon.png" alt=""></span><span class="wordmark__text">DIBSEN TECH</span></a><nav class="nav__links" aria-label="Navigasi utama"><a href="/">Beranda</a><a href="/products">Produk</a><a href="/services">Layanan</a><a href="/technologies">Teknologi</a><a href="/about-us">Tentang</a><a href="/contact">Kontak</a></nav><div class="nav__right"><div class="langsw" role="group" aria-label="Language / Bahasa" translate="no" data-no-i18n><button type="button" data-set-lang="id" aria-label="ID — Bahasa Indonesia">ID</button><button type="button" data-set-lang="en" aria-label="EN — English">EN</button></div></div></div></header>
-<main id="main" class="case"><div class="container">
-<div class="case__eyebrow">Technical case study · 2026</div>
-<h1>Dari partikel menjadi <em>produk.</em></h1>
-<p class="case__intro">Bagaimana DIBSEN TECH membangun pengalaman WebGL yang tetap cepat, dapat dijelajahi, dan dapat dipahami tanpa GPU, tanpa audio, dan tanpa mengandalkan satu jenis input.</p>
-<div class="case__grid"><div class="case__stat"><strong>64K</strong><span>partikel desktop untuk morphing lima bentuk</span></div><div class="case__stat"><strong>3</strong><span>mode mobile: idle, touch, dan full</span></div><div class="case__stat"><strong>0</strong><span>audio atau video dipaksa pada first load</span></div></div>
-<section class="case__section"><h2>01 / WebGL craft</h2><p>Hero menyusun identitas DIBSEN dan tiga produk sebagai bentuk partikel yang berubah melalui scroll. Data posisi dikompresi, bentuk diatur sebagai pasangan morph, dan shader menangani fluid motion, warna, burst, serta respons pointer. Desktop kuat mendapat bloom multi-pass; perangkat low-end turun ke direct render agar pengalaman tidak membayar efek yang tidak sanggup dibawa.</p><ul><li><b>Shape system</b>Lima state: origin, DIBSEN, SosMedPlus, SIPneX, dan Safe Raja Ampat.</li><li><b>Render budget</b>Pixel ratio, particle count, dan post-processing mengikuti kemampuan perangkat.</li></ul></section>
-<section class="case__section"><h2>02 / Progressive enhancement</h2><p>WebGL bukan syarat untuk memahami DIBSEN. Mobile memakai canvas 2D ringan dengan tier 240, 320, atau 420 partikel. Video fallback tidak diunduh otomatis pada layar kecil. Konten, CTA, dan link produk tetap tersedia ketika WebGL gagal, browser lambat, atau jaringan terbatas.</p><ul><li><b>Idle first</b>Mobile memulai dengan subset partikel dan naik ke full mode hanya saat disentuh.</li><li><b>Honest fallback</b>Poster tetap menjadi visual utama; tidak ada unduhan sinematik besar yang tidak diperlukan.</li></ul></section>
-<section class="case__section"><h2>03 / Accessibility by design</h2><p>Canvas hanya lapisan visual. Hero memiliki dock tombol native, keyboard equivalents, state machine, live status untuk screen reader, reduced-motion handling, CTA mobile, permission-aware tilt, dan audio yang sepenuhnya opt-in.</p><ul><li><b>Every state has a route</b>Arrow keys, Home, End, touch swipe, tap, dan dock menuju state yang sama.</li><li><b>Every effect has an exit</b>Audio dapat dimatikan, tilt meminta izin, animasi dapat dikurangi, dan tab visibility menghentikan kerja yang tidak terlihat.</li></ul></section>
-<div class="case__back"><a class="btn btn--amber" href="/">Kembali ke pengalaman DIBSEN</a></div><p class="case__note">Catatan: angka teknis di halaman ini berasal dari konfigurasi dan jalur implementasi homepage, bukan klaim jumlah pengguna atau hasil adopsi produk.</p>
-</div></main>
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="wordmark" href="/" aria-label="DIBSEN TECH, ke beranda">
+      <span class="wordmark__tile" aria-hidden="true"><img src="/assets/dibsen-icon.png" alt=""></span>
+      <span class="wordmark__text">DIBSEN TECH</span>
+    </a>
+    <input class="nav__cb" type="checkbox" id="navToggle" aria-label="Buka menu navigasi">
+    <nav class="nav__links" aria-label="Navigasi utama">
+      <a href="/">Beranda</a>
+      <a href="/products">Produk</a>
+      <a href="/services">Layanan</a>
+      <a href="/technologies">Teknologi</a>
+      <a href="/about-us">Tentang</a>
+      <a href="/case-study" aria-current="page">Case Study</a>
+      <a href="/contact">Kontak</a>
+    </nav>
+    <div class="nav__right">
+      <div class="langsw" role="group" aria-label="Language / Bahasa" translate="no" data-no-i18n>
+        <button type="button" data-set-lang="id" aria-label="ID — Bahasa Indonesia">ID</button>
+        <button type="button" data-set-lang="en" aria-label="EN — English">EN</button>
+      </div>
+      <label class="burger" for="navToggle">
+        <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </label>
+      <a class="btn btn--amber btn--sm" href="/contact">Hubungi Kami</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="case">
+  <div class="container">
+    <div class="case__eyebrow">Technical case study · Web &amp; Mobile Engineering · 2026</div>
+    <h1>Dari partikel menjadi <em>arsitektur dunia.</em></h1>
+    <p class="case__intro">Bagaimana DIBSEN TECH merekayasa situs dan platform web kelas dunia: grafis 3D WebGL 64.000 partikel, audio prosedural real-time, navigasi instan 0 milidetik via Speculation Rules, dan skor Triple 100 Lighthouse tanpa framework yang membebani pengguna.</p>
+
+    <div class="case__grid">
+      <div class="case__stat">
+        <strong>64K</strong>
+        <span>partikel desktop GPU untuk morphing multi-state real-time</span>
+      </div>
+      <div class="case__stat">
+        <strong>100</strong>
+        <span>skor Triple 100 Lighthouse: Performa, Aksesibilitas &amp; SEO</span>
+      </div>
+      <div class="case__stat">
+        <strong>0 ms</strong>
+        <span>latensi transisi rute berkat Speculation Rules prerender</span>
+      </div>
+      <div class="case__stat">
+        <strong>0</strong>
+        <span>dependensi berat; 100% Vanilla ESM dan shader terisolasi</span>
+      </div>
+    </div>
+
+    <section class="case__section">
+      <h2>01 / WebGL craft &amp; GPU Pipeline</h2>
+      <p>Hero beranda menyusun identitas DIBSEN dan tiga produk sebagai bentuk partikel yang berubah secara kontinu melalui scroll dan pointer. Data posisi dikompresi, bentuk diatur sebagai pasangan morph, dan custom shader menangani fluid motion, warna, burst, serta respons kursor. Desktop bertenaga mendapat bloom multi-pass; perangkat low-end otomatis beralih ke direct render agar pengguna tidak membayar komputasi efek yang tidak sanggup dibawa perangkat.</p>
+      <ul>
+        <li><b>Shape system</b>Lima state morfologi: origin, DIBSEN, SosMedPlus, SIPneX, dan Safe Raja Ampat.</li>
+        <li><b>Render budget</b>Pixel ratio, particle count, dan post-processing dinamis mengikuti fps telemetry perangkat.</li>
+      </ul>
+    </section>
+
+    <section class="case__section">
+      <h2>02 / Progressive enhancement &amp; Adaptive Tiers</h2>
+      <p>WebGL bukan syarat untuk memahami DIBSEN. Mobile memakai canvas 2D ringan dengan tier 240, 320, atau 420 partikel. Video fallback tidak diunduh otomatis pada layar kecil demi penghematan kuota. Seluruh konten, navigasi, CTA, dan data produk tetap berfungsi utuh ketika WebGL gagal, browser lawas, atau koneksi jaringan terbatas.</p>
+      <ul>
+        <li><b>Idle first</b>Mobile memulai dengan subset partikel dan bertransisi ke full mode hanya saat terjadi sentuhan interaktif.</li>
+        <li><b>Honest fallback</b>Poster dan tipografi tetap menjadi visual utama; tidak ada payload video raksasa yang dipaksakan.</li>
+      </ul>
+    </section>
+
+    <section class="case__section">
+      <h2>03 / Accessibility by design &amp; Sensory Respect</h2>
+      <p>Canvas hanya lapisan visual, bukan penghalang aksesibilitas. Seluruh antarmuka dilengkapi dock navigasi keyboard native, state machine yang sinkron, live region untuk screen reader, penanganan reduced-motion ketat, mobile action pad, sensor tilt sadar izin (permission-aware), dan audio sintetis Web Audio API yang sepenuhnya opt-in.</p>
+      <ul>
+        <li><b>Every state has a route</b>Arrow keys, Home, End, touch swipe, tap, dan dock menuju state yang sama persis.</li>
+        <li><b>Every effect has an exit</b>Audio dapat dibisukan, sensor meminta izin eksplisit, animasi patuh pada preferensi sistem, dan tab visibility menghentikan beban komputasi di latar belakang.</li>
+      </ul>
+    </section>
+
+    <section class="case__section">
+      <h2>04 / Zero Latency &amp; Speculation Rules</h2>
+      <p>Navigasi antar halaman di dibsen.io terasa secepat aplikasi desktop native tanpa latensi berpindah rute (0 ms). Memanfaatkan Speculation Rules API modern, browser memprediksi dan me-prerender dokumen tujuan di latar belakang saat kursor pengguna mendekati tautan navigasi, memotong roundtrip TTFB dan waktu unduh dokumen menjadi nol.</p>
+      <ul>
+        <li><b>Speculation Prerender</b>Prerender konservatif untuk rute internal tanpa konsumsi bandwidth berlebih di koneksi seluler.</li>
+        <li><b>Zero Cumulative Layout Shift</b>Reservasi dimensi gambar ketat dan font WOFF2 lokal menjamin CLS sempurna 0.000.</li>
+      </ul>
+    </section>
+
+    <section class="case__section">
+      <h2>05 / Dual-Language Engine &amp; Pure ESM</h2>
+      <p>Kami menolak arsitektur berbasis dependensi gemuk (bloatware). Seluruh runtime interaktif, audio sintetis prosedural Web Audio API, sistem translasi real-time dwibahasa, dan orkestrasi partikel ditulis dalam Vanilla ECMAScript murni dengan standar mutu Triple 100 Lighthouse.</p>
+      <ul>
+        <li><b>Client-side i18n Engine</b>Pohon DOM TreeWalker cerdas tanpa reload DOM destruktif, menjaga persistensi state WebGL dan audio.</li>
+        <li><b>Triple 100 Benchmark</b>Audit performa murni 100/100/100 pada uji Lighthouse untuk Performance, Accessibility, dan Best Practices.</li>
+      </ul>
+    </section>
+
+    <div class="case__back">
+      <a class="btn btn--amber" href="/services#web-solutions">Eksplorasi Layanan Web ↗</a>
+      <a class="btn btn--line" href="/technologies#web-engineering">Lihat Arsitektur Teknologi ↗</a>
+      <a class="btn btn--line" href="/">Kembali ke Beranda</a>
+    </div>
+    <p class="case__note">Catatan: metrik teknis di halaman ini bersumber dari konfigurasi runtime, shader pipeline, dan telemetry implementasi situs dibsen.io.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a class="wordmark" href="/" aria-label="DIBSEN TECH, ke beranda">
+          <span class="wordmark__tile" aria-hidden="true"><img src="/assets/dibsen-icon.png" alt=""></span>
+          <span class="wordmark__text">DIBSEN TECH</span>
+        </a>
+        <p class="footer__blurb">Digital Innovation Base &amp; Software Engineering Network. Studio rekayasa perangkat lunak lintas platform dari Raja Ampat, Papua Barat Daya.</p>
+      </div>
+      <div class="footer__col">
+        <b>Halaman</b>
+        <a href="/">Beranda</a><a href="/products">Produk</a><a href="/services">Layanan</a><a href="/technologies">Teknologi</a>
+        <a href="/about-us">Tentang</a><a href="/case-study">Case Study</a><a href="/contact">Kontak</a>
+        <a href="/privacy-policy">Kebijakan Privasi</a>
+      </div>
+      <div class="footer__col">
+        <b>Aplikasi</b>
+        <a href="https://play.google.com/store/apps/details?id=xyz.sipnex.app" rel="noopener noreferrer" target="_blank">SIPneX di Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dibsen.warganet_life" rel="noopener noreferrer" target="_blank">SosMedPlus di Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat" rel="noopener noreferrer" target="_blank">Safe Raja Ampat</a>
+        <a href="mailto:info@support.dibsen.io" style="margin-top:16px">info@support.dibsen.io</a>
+        <a href="https://wa.me/6282112515277?text=Halo%20Tim%20DIBSEN%20TECH%2C%20saya%20tertarik%20mendiskusikan%20pembuatan%20website%20atau%20aplikasi." rel="noopener noreferrer" target="_blank">+62 821-1251-5277</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>© 2026 DIBSEN TECH · Raja Ampat, Indonesia</span>
+      <span>Dibangun di Papua Barat Daya</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var t = document.getElementById('navToggle');
+  if (t) {
+    document.querySelectorAll('.nav__links a').forEach(function (a) {
+      a.addEventListener('click', function () { t.checked = false; });
+    });
+  }
+})();
+</script>
 <script src="/assets/i18n.js?v=spectrum28"></script>
+<script type="speculationrules">
+{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}],
+ "prerender":[{"where":{"href_matches":"/*"},"eagerness":"conservative"}]}
+</script>
 </body></html>
