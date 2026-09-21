@@ -918,7 +918,40 @@
     "Audit performa Lighthouse, pengujian pembaca layar, pengujian kecepatan respon, dan peniadaan layout shift (CLS).": "Lighthouse performance audits, screen reader validation, response profiling, and zero-CLS enforcement.",
     "05 · RILIS": "05 · LAUNCH",
     "Edge Deployment": "Edge Deployment",
-    "Peluncuran ke jaringan CDN global, pengamanan SSL/TLS tingkat tinggi, dan pendampingan pasca-rilis.": "Deploying to global edge CDNs, bulletproof SSL/TLS hardening, and proactive post-launch maintenance."
+    "Peluncuran ke jaringan CDN global, pengamanan SSL/TLS tingkat tinggi, dan pendampingan pasca-rilis.": "Deploying to global edge CDNs, bulletproof SSL/TLS hardening, and proactive post-launch maintenance.",
+
+    /* --- FASE 2: Rekayasa Web Modern di /technologies --- */
+    "DIBSEN.TECH · Web Engine": "DIBSEN.TECH · Web Engine",
+    "DIBSEN WEB ENGINE · Arsitektur & Kinerja": "DIBSEN WEB ENGINE · Architecture & Performance",
+    "Rekayasa web tingkat tinggi yang menolak kompromi.": "High-level web engineering that refuses compromise.",
+    "Bagaimana kami merancang website berkinerja puncak seperti dibsen.io: grafis partikel 3D tanpa membebani GPU, transisi halaman instan tanpa layar tunggu, dan kepatuhan aksesibilitas universal.": "How we engineer peak-performance websites like dibsen.io: 3D particle graphics without GPU overload, instant page transitions with zero loading screens, and universal accessibility compliance.",
+    "Grafis 3D & Pengalaman Sensorik": "3D Graphics & Sensory Experience",
+    "Memadukan WebGL, Three.js, dan Web Audio API untuk visual yang hidup namun tetap ringan di ponsel.": "Combining WebGL, Three.js, and Web Audio API for vivid visuals that remain lightweight on mobile devices.",
+    "Simulasi 64.000 partikel WebGL": "64,000 WebGL particle simulation",
+    "Data koordinat dikompresi menjadi struktur floating-point efisien dengan morphing 5 bentuk secara real-time.": "Coordinate data compressed into efficient floating-point structures with real-time 5-shape morphing.",
+    "Adaptasi multi-tier cerdas (LOD)": "Intelligent multi-tier adaptation (LOD)",
+    "Di ponsel, adegan beralih otomatis ke Canvas 2D ringan (tier 240, 320, atau 420 partikel) demi menjaga masa pakai baterai.": "On mobile, the scene automatically pivots to lightweight Canvas 2D (tier 240, 320, or 420 particles) to preserve battery life.",
+    "Audio prosedural opt-in": "Opt-in procedural audio",
+    "Suara interaktif disintesis langsung lewat algoritma matematika Web Audio API tanpa perlu mengunduh file MP3 besar.": "Interactive sound synthesised directly via Web Audio API mathematical algorithms without downloading bulky MP3 files.",
+    "Deteksi hardware & anti-software renderer": "Hardware detection & anti-software renderer",
+    "Mendeteksi SwiftShader atau llvmpipe untuk mencegah browser kantor lama terkunci oleh beban grafis.": "Detects SwiftShader or llvmpipe to prevent legacy office machines from locking up under graphics workloads.",
+    "Nol Latensi & Standar Web Modern": "Zero Latency & Modern Web Standards",
+    "Menghilangkan jeda antar-halaman dan menjamin situs dapat diakses siapa saja, di mana saja.": "Eliminating page-to-page latency while ensuring universal access for everyone, everywhere.",
+    "Speculation Rules API": "Speculation Rules API",
+    "Browser memprerender halaman berikutnya saat tombol mouse ditekan, menghadirkan transisi rute dalam 0 milidetik.": "The browser pre-renders the target page the instant a mouse button is pressed, delivering 0-millisecond route transitions.",
+    "Aksesibilitas tingkat penuh (WCAG 2.1)": "Full-spectrum accessibility (WCAG 2.1)",
+    "Navigasi dock keyboard lengkap (Tab, Arrow keys, Home, End), live region untuk pembaca layar, dan mode hemat gerak.": "Complete keyboard dock navigation (Tab, Arrow keys, Home, End), screen reader live regions, and reduced-motion modes.",
+    "Zero layout shift (CLS 0.000)": "Zero layout shift (CLS 0.000)",
+    "Rasio aspek terkunci sejak awal, mencegah pergeseran tombol yang mengganggu saat gambar atau font sedang dimuat.": "Aspect ratios locked upfront, preventing disruptive layout shifts while images or web fonts are loading.",
+    "Pemuatan aset adaptif": "Adaptive asset streaming",
+    "Video sinematik hanya dimuat saat mendekati viewport, menghemat kuota pengunjung di wilayah minim jaringan.": "Cinematic video streams only as it nears the viewport, conserving visitor data in connectivity-constrained regions.",
+    "Three.js & WebGL 2.0": "Three.js & WebGL 2.0",
+    "Grafis 3D interaktif, shader GLSL kustom, dan simulasi partikel berkecepatan tinggi yang adaptif otomatis ke GPU perangkat.": "Interactive 3D graphics, custom GLSL shaders, and high-speed particle simulation automatically adapted to hardware GPUs.",
+    "Prapemuatan cerdas di peramban sebelum tombol diklik, menghasilkan navigasi instan 0 ms tanpa layar kosong.": "Intelligent browser pre-rendering before clicks occur, yielding instant 0 ms navigation with zero blank screens.",
+    "Framework Web Modern": "Modern Web Frameworks",
+    "Arsitektur Vanilla ESM murni tanpa bloatware, serta React/Next.js dan Vite untuk web app skala besar yang cepat.": "Pure Vanilla ESM architecture free of bloatware, alongside React/Next.js and Vite for scalable, ultra-fast web apps.",
+    "Aksesibilitas WCAG & SEO": "WCAG Accessibility & SEO",
+    "Semantik HTML5 murni, kontras terkalibrasi, navigasi keyboard penuh, dan jaminan skor Triple 100 Lighthouse.": "Pure HTML5 semantics, calibrated contrast ratios, full keyboard flow, and guaranteed Triple 100 Lighthouse score."
   };
   
 
