@@ -47,8 +47,8 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
      footer, dan nama token warnanya berdiri sendiri dan harus dirawat dua kali.
      Urutannya sengaja paling awal: assets/home.css di bawahnya tetap bisa
      menimpanya. -->
-<link rel="stylesheet" href="assets/style.css?v=spectrum29">
-<link rel="stylesheet" href="assets/home.css?v=spectrum32"></head><body>
+<link rel="stylesheet" href="assets/style.css?v=spectrum30">
+<link rel="stylesheet" href="assets/home.css?v=spectrum36"></head><body>
 <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
 <div class="intro" aria-hidden="true"><div class="ipct">0</div><div class="ibar"></div></div>
@@ -321,7 +321,9 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
       <p data-i18n="Produk DIBSEN tersedia di Google Play dan terus dikembangkan dari Raja Ampat untuk kebutuhan yang nyata.">Produk DIBSEN tersedia di Google Play dan terus dikembangkan dari Raja Ampat untuk kebutuhan yang nyata.</p>
     </div>
     <div class="atlas-legend" role="group" data-reveal aria-label="Keterangan Product Atlas"><span><b data-i18n="FACT">FACT</b> <span data-i18n="status dan tautan resmi">status dan tautan resmi</span></span><span><b data-i18n="CONCEPT">CONCEPT</b> <span data-i18n="simulator interaktif">simulator interaktif</span></span><span><b data-i18n="ARTEFACT">ARTEFACT</b> <span data-i18n="tampilan build">tampilan build</span></span></div>
-    <div class="atlas-grid">
+    <div class="atlas-grid atlas-stack">
+      <div class="atlas-stack__viewport">
+      <div class="atlas-stack__item" style="--i:0">
       <article class="atlas-card atlas-card--social" data-reveal>
         <div class="atlas-card__top"><span class="atlas-index">01</span><span class="atlas-status" data-i18n="Google Play · Dalam pengembangan">Google Play · Dalam pengembangan</span></div>
         <img src="assets/logos/sosialmedia.png" width="240" height="240" loading="lazy" alt="Logo SosMedPlus">
@@ -335,6 +337,8 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
         </div>
         <div class="atlas-card__copy"><h3>SosMedPlus</h3><p data-i18n="Suara, karya, dan kepemilikan dalam satu ruang sosial yang lebih transparan.">Suara, karya, dan kepemilikan dalam satu ruang sosial yang lebih transparan.</p><a class="atlas-link" href="/products/#sosialmedia" data-i18n="Jelajahi produk">Jelajahi SosMedPlus <b aria-hidden="true">↗</b></a></div>
       </article>
+      </div>
+      <div class="atlas-stack__item" style="--i:1">
       <article class="atlas-card atlas-card--sipnex" data-reveal>
         <div class="atlas-card__top"><span class="atlas-index">02</span><span class="atlas-status" data-i18n="Google Play · Dalam pengembangan">Google Play · Dalam pengembangan</span></div>
         <img src="assets/logos/sipnex.png" width="466" height="240" loading="lazy" alt="Logo SIPneX">
@@ -348,6 +352,8 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
         </div>
         <div class="atlas-card__copy"><h3>SIPneX</h3><p data-i18n="Presensi dan kinerja yang menjaga integritas data di setiap hadir.">Presensi dan kinerja yang menjaga integritas data di setiap hadir.</p><a class="atlas-link" href="/products/#sipnex" data-i18n="Jelajahi produk">Jelajahi SIPneX <b aria-hidden="true">↗</b></a></div>
       </article>
+      </div>
+      <div class="atlas-stack__item" style="--i:2">
       <article class="atlas-card atlas-card--safe" data-reveal>
         <div class="atlas-card__top"><span class="atlas-index">03</span><span class="atlas-status" data-i18n="Google Play · Dalam pengembangan">Google Play · Dalam pengembangan</span></div>
         <img src="assets/logos/safe-raja-ampat.png" width="240" height="240" loading="lazy" alt="Logo Safe Raja Ampat">
@@ -361,6 +367,8 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
         </div>
         <div class="atlas-card__copy"><h3>Safe Raja Ampat</h3><p data-i18n="Informasi keselamatan yang hadir saat paling dibutuhkan.">Informasi keselamatan yang hadir saat paling dibutuhkan.</p><a class="atlas-link" href="/products/#safe" data-i18n="Jelajahi produk">Jelajahi Safe Raja Ampat <b aria-hidden="true">↗</b></a></div>
       </article>
+      </div>
+      </div>
     </div>
     <div class="atlas-proof" data-reveal>
       <div class="atlas-proof__intro"><span class="atlas-index" data-i18n="Artefak 01—03">Artefak 01—03</span><h3><span data-i18n="Yang bisa dilihat">Yang bisa dilihat</span><br><em data-i18n="sekarang.">sekarang.</em></h3><p data-i18n="Antarmuka dari build produk yang sedang dikembangkan. Tersedia di Google Play untuk eksplorasi lebih lanjut.">Antarmuka dari build produk yang sedang dikembangkan. Tersedia di Google Play untuk eksplorasi lebih lanjut.</p></div>
@@ -407,67 +415,6 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
   </div>
 </section>
 
-<section class="blk web-spotlight" id="web-engineering" data-reveal aria-label="Web Engineering Standar Dunia">
-  <div class="wrap">
-    <div class="web-spotlight__grid">
-      <div class="web-spotlight__copy">
-        <p class="lab web-spotlight__lab">DIBSEN.TECH · Web Engineering</p>
-        <h2 class="web-spotlight__title">Bukan sekadar aplikasi. <em>Website terbaik di dunia.</em></h2>
-        <p class="web-spotlight__desc">Kami merekayasa platform web dengan standar visual setara video game dan ketangguhan arsitektur enterprise. Dari WebGL 3D 64.000 partikel, audio sintetis prosedural, hingga navigasi instan 0 milidetik dengan skor Triple 100 Lighthouse — dibsen.io adalah bukti empiris standar rekayasa web kami.</p>
-
-        <div class="web-spotlight__metrics">
-          <div class="web-spotlight__metric">
-            <span class="web-spotlight__num">100</span>
-            <span class="web-spotlight__metric-label">Triple 100 Lighthouse</span>
-            <span class="web-spotlight__metric-sub">Performa · Aksesibilitas · SEO</span>
-          </div>
-          <div class="web-spotlight__metric">
-            <span class="web-spotlight__num">64K</span>
-            <span class="web-spotlight__metric-label">Partikel GPU WebGL</span>
-            <span class="web-spotlight__metric-sub">Engine Real-time 60 FPS</span>
-          </div>
-          <div class="web-spotlight__metric">
-            <span class="web-spotlight__num">0 ms</span>
-            <span class="web-spotlight__metric-label">Navigasi Spekulatif</span>
-            <span class="web-spotlight__metric-sub">Pemuatan Halaman 0 ms</span>
-          </div>
-        </div>
-
-        <div class="web-spotlight__actions">
-          <a class="btn btn--amber" href="/services#web-solutions">Eksplorasi Solusi Web ↗</a>
-          <a class="btn btn--line" href="/case-study">Baca Case Study Teknis ↗</a>
-        </div>
-      </div>
-
-      <div class="web-spotlight__visual">
-        <div class="web-spotlight__frame">
-          <div class="web-spotlight__glow" aria-hidden="true"></div>
-          <div class="web-spotlight__card">
-            <div class="web-spotlight__chrome">
-              <div class="web-spotlight__dots" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="web-spotlight__addr">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                <span>dibsen.io/engine</span>
-              </div>
-              <div class="web-spotlight__badge">PROD · VERIFIED</div>
-            </div>
-            <div class="web-spotlight__screen">
-              <img src="assets/shots/dibsen-web.webp" width="720" height="960" loading="lazy" decoding="async" alt="Tampilan arsitektur dan antarmuka web DIBSEN">
-              <div class="web-spotlight__tags">
-                <span class="web-tag">Three.js &amp; WebGL 2.0</span>
-                <span class="web-tag">Audio Prosedural</span>
-                <span class="web-tag">Jaminan Nol CLS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="blk reserve" id="reserve" data-reveal aria-label="Konsultasi proyek">
   <div class="wrap"><div class="k">DIBSEN TECH · Kontrak proyek</div><h2>Mari bangun sistem Anda.</h2><a class="cta" href="/contact" data-magnetic>Konsultasikan proyek</a></div>
 </section>
@@ -491,7 +438,7 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
       <div class="footer__col">
         <b>Halaman</b>
         <a href="/">Beranda</a><a href="/products">Produk</a><a href="/services">Layanan</a><a href="/technologies">Teknologi</a>
-        <a href="/about-us">Tentang</a><a href="/case-study">Case Study</a><a href="/contact">Kontak</a>
+        <a href="/about-us">Tentang</a><a href="/contact">Kontak</a>
         <a href="/privacy-policy">Kebijakan Privasi</a>
       </div>
       <div class="footer__col">
@@ -511,7 +458,7 @@ try{var c=document.createElement('canvas');if(window.WebGLRenderingContext&&(c.g
 </footer>
 
 <script src="assets/i18n.js?v=spectrum24" defer></script>
-<script src="assets/product-atlas.js?v=2" defer></script>
+<script src="assets/product-atlas.js?v=5" defer></script>
 <script>
   /* Perilaku nav beranda.
 

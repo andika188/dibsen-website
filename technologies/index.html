@@ -27,7 +27,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
 <meta property="og:image" content="https://dibsen.io/assets/dibsen-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/fonts.css?v=spectrum28">
-<link rel="stylesheet" href="/assets/style.css?v=spectrum29">
+<link rel="stylesheet" href="/assets/style.css?v=spectrum30">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "DIBSEN TECH", "alternateName": ["DIBSEN", "Dibsen Tech", "Digital Innovation Base and Software Engineering Network"], "url": "https://dibsen.io/", "publisher": {"@id": "https://dibsen.io/#organization"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://dibsen.io/#organization", "name": "DIBSEN TECH", "legalName": "Digital Innovation Base and Software Engineering Network", "alternateName": "DIBSEN", "url": "https://dibsen.io/", "logo": {"@type": "ImageObject", "url": "https://dibsen.io/assets/logo-dibsen.png", "width": 512, "height": 512}, "image": "https://dibsen.io/assets/dibsen-cover.jpg", "description": "Studio rekayasa perangkat lunak lintas platform dari Raja Ampat. Membangun ekosistem aplikasi web dan mobile yang aman dan terukur untuk instansi pemerintah, usaha, dan perorangan.", "foundingDate": "2025", "address": {"@type": "PostalAddress", "addressLocality": "Waisai, Raja Ampat", "addressRegion": "Papua Barat Daya", "addressCountry": "ID"}, "contactPoint": [{"@type": "ContactPoint", "telephone": "+62-821-1251-5277", "email": "info@support.dibsen.io", "contactType": "sales", "areaServed": "ID", "availableLanguage": ["id", "en"]}], "sameAs": ["https://play.google.com/store/apps/details?id=xyz.sipnex.app", "https://play.google.com/store/apps/details?id=com.dibsen.warganet_life", "https://play.google.com/store/apps/details?id=com.bpbd.saferajaampat"]}</script>
@@ -132,7 +132,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
         <a class="techmap__label" data-node="sipnex" href="#sipnex"><i class="is-teal" aria-hidden="true"></i>SIPneX · Verifikasi</a>
         <a class="techmap__label" data-node="sosialmedia" href="#sosialmedia"><i class="is-gold" aria-hidden="true"></i>SosMedPlus · Kecerdasan</a>
         <a class="techmap__label" data-node="safe" href="#safe"><i class="is-orange" aria-hidden="true"></i>Safe Raja Ampat · Respons</a>
-        <a class="techmap__label techmap__label--core" data-node="core" href="#web-engineering">DIBSEN.TECH · Web Engine</a>
+        <span class="techmap__label techmap__label--core" data-node="core">DIBSEN.TECH</span>
       </div>
       <p class="techmap__note">Ilustrasi sistem · bukan representasi data langsung</p>
     </div>
@@ -282,67 +282,6 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
   </div>
 </section>
 
-<!-- ============ REKAYASA WEB MODERN ============ -->
-<section class="section" id="web-engineering">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="marker">DIBSEN WEB ENGINE · Arsitektur &amp; Kinerja</span>
-      <h2>Rekayasa web tingkat tinggi yang menolak kompromi.</h2>
-      <p class="lead">Bagaimana kami merancang website berkinerja puncak seperti dibsen.io: grafis partikel 3D tanpa membebani GPU, transisi halaman instan tanpa layar tunggu, dan kepatuhan aksesibilitas universal.</p>
-    </div>
-
-    <div class="feature" data-reveal style="--d:1">
-      <div class="feature__side">
-        <h3>Grafis 3D &amp; Pengalaman Sensorik</h3>
-        <p>Memadukan WebGL, Three.js, dan Web Audio API untuk visual yang hidup namun tetap ringan di ponsel.</p>
-      </div>
-      <ul class="speclist">
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Simulasi 64.000 partikel WebGL</b><span>Data koordinat dikompresi menjadi struktur floating-point efisien dengan morphing 5 bentuk secara real-time.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Adaptasi multi-tier cerdas (LOD)</b><span>Di ponsel, adegan beralih otomatis ke Canvas 2D ringan (tier 240, 320, atau 420 partikel) demi menjaga masa pakai baterai.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Audio prosedural opt-in</b><span>Suara interaktif disintesis langsung lewat algoritma matematika Web Audio API tanpa perlu mengunduh file MP3 besar.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Deteksi hardware &amp; anti-software renderer</b><span>Mendeteksi SwiftShader atau llvmpipe untuk mencegah browser kantor lama terkunci oleh beban grafis.</span></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="feature" data-reveal style="--d:2">
-      <div class="feature__side">
-        <h3>Nol Latensi &amp; Standar Web Modern</h3>
-        <p>Menghilangkan jeda antar-halaman dan menjamin situs dapat diakses siapa saja, di mana saja.</p>
-      </div>
-      <ul class="speclist">
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Speculation Rules API</b><span>Browser memprerender halaman berikutnya saat tombol mouse ditekan, menghadirkan transisi rute dalam 0 milidetik.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Aksesibilitas tingkat penuh (WCAG 2.1)</b><span>Navigasi dock keyboard lengkap (Tab, Arrow keys, Home, End), live region untuk pembaca layar, dan mode hemat gerak.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Zero layout shift (CLS 0.000)</b><span>Rasio aspek terkunci sejak awal, mencegah pergeseran tombol yang mengganggu saat gambar atau font sedang dimuat.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
-          <div><b>Pemuatan aset adaptif</b><span>Video sinematik hanya dimuat saat mendekati viewport, menghemat kuota pengunjung di wilayah minim jaringan.</span></div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- ============ TUMPUKAN TEKNOLOGI ============ -->
 <section class="section section--panel">
   <div class="container">
@@ -391,26 +330,6 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
         <h3>Enkripsi SSL/TLS</h3>
         <p>Seluruh transmisi antara aplikasi, dashboard, dan server dilindungi protokol enkripsi standar.</p>
       </div>
-      <div class="tile" data-reveal style="--d:1">
-        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 16-9 5-9-5V8l9-5 9 5v8Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/></svg></span>
-        <h3>Three.js &amp; WebGL 2.0</h3>
-        <p>Grafis 3D interaktif, shader GLSL kustom, dan simulasi partikel berkecepatan tinggi yang adaptif otomatis ke GPU perangkat.</p>
-      </div>
-      <div class="tile" data-reveal style="--d:2">
-        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-        <h3>Speculation Rules API</h3>
-        <p>Prapemuatan cerdas di peramban sebelum tombol diklik, menghasilkan navigasi instan 0 ms tanpa layar kosong.</p>
-      </div>
-      <div class="tile" data-reveal style="--d:3">
-        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
-        <h3>Framework Web Modern</h3>
-        <p>Arsitektur Vanilla ESM murni tanpa bloatware, serta React/Next.js dan Vite untuk web app skala besar yang cepat.</p>
-      </div>
-      <div class="tile" data-reveal style="--d:4">
-        <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg></span>
-        <h3>Aksesibilitas WCAG &amp; SEO</h3>
-        <p>Semantik HTML5 murni, kontras terkalibrasi, navigasi keyboard penuh, dan jaminan skor Triple 100 Lighthouse.</p>
-      </div>
     </div>
 
     <p class="muted" data-reveal style="font-size:.86rem;margin-top:28px;max-width:64ch">Nama dan merek layanan pihak ketiga adalah milik pemiliknya masing-masing. DIBSEN TECH menggunakan layanan tersebut melalui jalur resmi dan tidak berafiliasi dengan, tidak disponsori oleh, maupun mewakili perusahaan-perusahaan tersebut.</p>
@@ -447,7 +366,7 @@ setTimeout(function(){document.documentElement.classList.remove('dt-pending')},1
       <div class="footer__col">
         <b>Halaman</b>
         <a href="/">Beranda</a><a href="/products">Produk</a><a href="/services">Layanan</a><a href="/technologies">Teknologi</a>
-        <a href="/about-us">Tentang</a><a href="/case-study">Case Study</a><a href="/contact">Kontak</a>
+        <a href="/about-us">Tentang</a><a href="/contact">Kontak</a>
         <a href="/privacy-policy">Kebijakan Privasi</a>
       </div>
       <div class="footer__col">

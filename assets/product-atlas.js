@@ -65,4 +65,47 @@
   } else if (atlas) {
     atlas.classList.add('is-arrived');
   }
+
+  // Product Atlas stacking-cards (2026-09-26, rev2): kartu 1 diam di panel
+  // yang sticky, kartu 2 & 3 digeser masuk dari bawah lewat translateY()
+  // sesuai progres scroll — pola yang sama persis dengan updateHeroCaption
+  // di index.html (scroll listener biasa, hitung progress 0..1, set
+  // transform). Alasan pindah dari position:sticky per-kartu (percobaan
+  // sebelumnya): supaya dua kartu setinggi ~600px benar2 tumpang tindih,
+  // offset top antar kartu sticky harus lebih besar dari tinggi kartu itu
+  // sendiri (>600px) — angka itu sudah lebih besar dari viewport manapun
+  // begitu ada 3 kartu, jadi teknik top-offset-beda tidak bisa dipakai di
+  // sini. translateY berbasis progres tidak punya batasan itu.
+  var atlasStack = document.querySelector('.atlas-stack');
+  var atlasViewport = document.querySelector('.atlas-stack__viewport');
+  var atlasItems = [].slice.call(document.querySelectorAll('.atlas-stack__item'));
+  if (atlasStack && atlasViewport && atlasItems.length > 1) {
+    var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var supportsInert = 'inert' in HTMLElement.prototype;
+    var segments = atlasItems.length - 1;
+    var narrowMQ = matchMedia('(max-width: 820px)');
+    var updateAtlasStack = function () {
+      if (reduceMotion || narrowMQ.matches) return;
+      var total = atlasStack.offsetHeight - atlasViewport.offsetHeight;
+      var stackTop = atlasStack.getBoundingClientRect().top + scrollY;
+      var progress = total > 0 ? Math.max(0, Math.min(1, (scrollY - stackTop) / total)) : 0;
+      atlasItems.forEach(function (item, i) {
+        if (i === 0) return;
+        var segStart = (i - 1) / segments;
+        var segEnd = i / segments;
+        var segProgress = Math.max(0, Math.min(1, (progress - segStart) / (segEnd - segStart)));
+        item.style.transform = 'translateY(' + (1 - segProgress) * 100 + '%)';
+        var prevItem = atlasItems[i - 1];
+        var covered = segProgress >= 0.999;
+        prevItem.classList.toggle('is-stacked-behind', covered);
+        if (supportsInert) {
+          if (covered && prevItem.contains(document.activeElement)) document.activeElement.blur();
+          prevItem.inert = covered;
+        }
+      });
+    };
+    addEventListener('scroll', updateAtlasStack, { passive: true });
+    addEventListener('resize', updateAtlasStack);
+    updateAtlasStack();
+  }
 })();
